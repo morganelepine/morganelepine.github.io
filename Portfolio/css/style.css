@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Oswald:wght@300&display=swap');
+
+body
+{
+    /*padding: 2%; 2% de la page*/
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #f7f7f7;
+    color: #102542;
+}
+
+
+/* BANDEAU NAVIGATION */
+
+nav
+{
+    padding: 1%;
+    display: flex; /*on dit qu'on va utiliser les flexbox*/
+    flex-direction: row;
+    flex-wrap: wrap; /*passer à la ligne lorsque les éléments ne rentrent pas*/
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /*reste au dessus de la page*/
+    top:0; /*en haut de l'écran*/
+    background-color: #f7f7f7;
+}
+
+nav .profile
+{
+    display: flex;
+    align-items: center;
+}
+
+nav .profile img
+{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+nav h1
+/*Morgane LU*/
+{
+    margin-left: 10px;
+    font-size: 1.5vw; /*view with = 6% de la largeur de la page*/
+}
+
+nav ul
+{
+    display: flex;
+    list-style-type: none; /*enlève les puces*/
+}
+
+nav a
+{
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: #f87060;
+    box-shadow: 3px 3px #102542;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+
+}
+
+nav a:hover{
+    background-color: #102542;
+    box-shadow: 3px 3px #f87060;
+}
+
+
+
+/* HEADER */
+
+.header
+{
+    text-align: center;
+}
+
+.header h1
+{
+    margin: 0;
+    padding: 20px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px #F7E579;
+    letter-spacing: 3px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 6vw; /*view with = 6% de la largeur de la page*/
+}
+
+.header p
+{
+    line-height: 30px;
+    color: grey;
+}
+
+.header button
+{
+    background-color: inherit;
+    border: none;
+    outline: none; /*pas de contour lorsqu'on clique*/
+    padding: 0; /*pas de marge à l'intérieur du bouton*/
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+}
+
+.header button:hover
+{
+    color: grey;
+    border-bottom-color: black;
+}
+
+
+/* CONTENU DE LA PAGE */
+
+.page-content h2
+{
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    letter-spacing: 5px;
+}
+
+.page-content h3
+{
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+.page-content h4
+{
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+}
+
+.page-content .description
+{
+    font-size: 14px;    
+}
+
+.page-content ul
+{
+    font-size: 14px;
+    padding: 0;
+    margin-left: 1.2em;
+}
+
+.page-content .date
+{
+    font-size: 12px;
+    color: grey;
+    font-style: italic;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+
+/* CONTENU DE LA PAGE : projets */
+
+.page-content .section-projets
+{
+    margin-top: 10%;
+}
+
+.page-content .section-projets .projets
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    justify-content: space-evenly;
+}
+
+.page-content .section-projets .projets .projet
+{
+    max-width: 200px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.page-content .section-projets .projets .projet .langage
+{
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    color:#102542;
+    background-color:#F7E579;
+    border-radius: 10px;
+    padding: 6px;
+    margin-top:10px;
+}
+
+.page-content #projets img
+{
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+
+/* CONTENU DE LA PAGE : expériences pro */
+
+.page-content .section-pro
+{
+    background-color: #F7E579;
+    padding-top: 5px;
+    margin-top: 100px;
+}
+
+.page-content .section-pro .jobs
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    justify-content: space-evenly;
+}
+
+.page-content .section-pro .jobs .job
+{
+    max-width: 250px;
+    padding: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.page-content .section-pro .jobs .job ul
+{
+    text-align: left;
+}
+
+.page-content .section-pro .jobs .job img
+{
+    height: 30px;
+    border-radius: 10%;
+    padding: 5px;
+    background-color: white;
+}
+
+
+
+/* CONTENU DE LA PAGE : formations */
+
+.page-content .section-education
+{
+    margin-top: 10%;
+}
+
+.page-content .section-education .formations
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-content .section-education .formations .formation
+{
+    max-width: 250px;
+    background-color: #F7E579;
+    box-shadow: 4px 4px #102542;
+    border-radius: 20px;
+    padding: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.page-content .section-education .formations .formation:hover
+{
+    color: white;
+    background-color: #102542;
+    box-shadow: 3px 3px #F7E579;
+}
+
+.page-content .section-education .formations .formation img
+{
+    height: 30px;
+    border-radius: 10%;
+    padding: 5px;
+    background-color: white;
+}
+
+
+/* FOOTER */
+
+footer
+{
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #102542;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#footer p, #footer a
+{
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #f87060;
+    /*box-shadow: 3px 3px white;*/
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+
+/*ne s'exécute que quand la largeur d'écran est <= 700px*/
+@media screen and (max-width:700px)
+{
+    nav{
+        justify-content: center;
+        padding : 5px;
+    }
+    nav .profile img{
+        width: 40px;
+        height: 40px;
+    }
+    nav ul{display: none;}
+    .page-content header{ /*occupe 100% de la taille*/
+        margin-top: 10px;
+        max-width: 100%;
+    }
+    .page-content .section-projets h2{
+    font-size: 28px;
+    }
+    .page-content .section-projets .projets .projet{
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+    .page-content .section-pro .jobs .job{
+        max-width: 100%;
+    }
+    .page-content .section-education .formations .formation{
+        max-width: 100%;
+    }
+    footer{
+        justify-content: flex-start;
+        justify-content: center;
+        text-align: center;
+    }
+    footer .colonne{
+        max-width: 80%;
+    }
+}
+
+
+
