@@ -1,0 +1,21 @@
+jaune : #F7E579
+bleu : #102542
+corail : #f87060
+
+pale : #F8EFEA
+jaune/vert : #DED369
+rose : #E0475B
+vert : #014732
+
+vert : #00584f
+
+252b21
+
+bleu : #111C59
+
+
+combiné
+pale : #F8EFEA
+jaune : #F7E579 / #E0DB5E
+bleu : #102542
+rose : #E0475B

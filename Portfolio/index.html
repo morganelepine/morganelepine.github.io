@@ -5,13 +5,16 @@
     <title>Morgane LU</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta charset="UTF-8">
+    
 </head>
 
 <body>
-    <nav id="nav">
+    <!--MENU HAUT DE PAGE-->
+<!--     <nav id="nav">
         <div class="profile">
-            <img src="img/profile.jpg" alt="Photo de profil">
+            <img src="img/profile.jpg" id="photo" alt="Photo de profil">
             <h1>Morgane LU</h1>
         </div>
         <ul>
@@ -20,21 +23,44 @@
             <li><a href="#pro">Curriculum vitæ</a></li>
             <li><a href="#footer">Contact</a></li>
         </ul>
-    </nav>
+    </nav> -->
 
     <!-- HEADER -->
-    <section class="header">
-        <header>
-            <h1>Développeuse en devenir</h1>
-            <p>En formation chez Ada Tech School</p>
-            <button class="button" type="button">Téléchargez mon CV</button>
-        </header>
+
+    <section id="header" class="parallax parallax1">
+
+        <!--MENU AU SCROLL-->
+        <div id="menuScroll">
+            <div class="navScroll">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <div class="menu">
+                    <li><a href="">À propos de moi</a></li>
+                    <li><a href="#projets">Projets réalisés</a></li>
+                    <li><a href="#pro">Curriculum vitæ</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </div>
+            </div>
+        </div>
+
+        <!--TITRE-->
+        <div id="titreHeader">
+            <header>
+                <h1>Hey, c'est Morgane</h1>
+                <h2 >Développeuse en devenir</h2>
+            </header>
+        </div>
+
     </section>
-    
+
+
+    <!-- CONTENU DE LA PAGE -->
+
     <section class="page-content">
 
         <!-- PROJETS -->
-        <section class="section-projets" id="projets">
+        <section class="section-projets one" data-color="#F8EFEA" id="projets">
             <h2>Projets réalisés</h2>
             <div class="projets">
                 <div class="projet">
@@ -69,7 +95,7 @@
         </section>
 
         <!-- EXPERIENCES PRO -->
-        <section class="section-pro" id="pro">
+        <section class="section-pro two" data-color="#Ffff" id="pro">
             <h2>Expériences professionnelles</h2>
             <div class="jobs">
                 <div class="job">
@@ -77,9 +103,11 @@
                     <div class="date">Septembre 2016 - Septembre 2022</div>
                     <img src="img/logo-hachette-education.jpg" alt="Logo Hachette Éducation">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Pellentesque auctor feugiat risus, eu pharetra massa dictum sed.</li>
-                        <li>Vivamus aliquam, lectus et laoreet tincidunt, dui lectus efficitur felis, sed auctor tortor sapien in sem.</li>
+                        <li>Gestion du budget et du plan marketing : envois dans les écoles, catalogues, documents promotionnels, publicités...</li>
+                        <li>Mise en œuvre et optimisation de la stratégie e-marketing : envoi de newsletters, création de sites promotionnels, réalisation de vidéos...</li>
+                        <li>Community management : gestion des comptes Twitter, Facebook, Instagram et YouTube.</li>
+                        <li>Mise en place de tables rondes et d'enquêtes utilisateurs</li>
+                        <li>Étude et suivi de la concurrence et de l'évolution des marchés papier et numérique.</li>
                     </ul>
                 </div>
                 <div class="job">
@@ -87,9 +115,9 @@
                     <div class="date">Mars 2016 - Août 2016</div>
                     <img src="img/logo-gah.jpg" alt="Logo Diffusion Groupe Alexandre Hatier">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Pellentesque auctor feugiat risus, eu pharetra massa dictum sed.</li>
-                        <li>Vivamus aliquam, lectus et laoreet tincidunt, dui lectus efficitur felis, sed auctor tortor sapien in sem.</li>
+                        <li>Analyses de marchés, bilan des performances, études qualitatives auprès des clients.</li>
+                        <li>Développement de l'activité numérique : veille concurrentielle, réponse aux appels d'offres d'opérations e-books.</li>
+                        <li>Soutien opérationnel : suivi de campagne, préparation du matériel commercial.</li>
                     </ul>
                 </div>
                 <div class="job">
@@ -97,9 +125,11 @@
                     <div class="date">Janvier 2015 - Décembre 2015</div>
                     <img src="img/logo-robert.png" alt="Logo Éditions Le Robert">
                     <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                        <li>Pellentesque auctor feugiat risus, eu pharetra massa dictum sed.</li>
-                        <li>Vivamus aliquam, lectus et laoreet tincidunt, dui lectus efficitur felis, sed auctor tortor sapien in sem.</li>
+                        <li>Développement des ouvrages papiers et numériques : analyses de marchés, suivi des ventes, veille concurrentielle, réalisation d'études.</li>
+                        <li>Suivi opérationnel des plans marketing multicanaux.</li>
+                        <li>Veille média print et web.</li>
+                        <li>Développement et suivi des partenariats médias et hors médias.</li>
+                        <li>Community management : gestion des comptes Facebook et Twitter.</li>
                     </ul>
                 </div>
             </div>
@@ -107,39 +137,69 @@
 
 
         <!-- FORMATIONS -->
-        <section class="section-education" id="education">
+        <section class="section-education three" data-color="#F8EFEA" id="education">
             <h2>Formations</h2>
             <h3>Formations longues</h3>
-            <div class="formations">
-                <div class="formation">
-                    <h4>Ada Tech School</h4>
-                    <div class="date">Octobre 2022 - Juillet 2024</div>
-                    <div class="description">École d'informatique inclusive, où on apprend à coder avec une pédagogie alternative.</div>
+            <div class="formations" >
+                <div class="cardBox">
+                    <div class="card">
+                        <div class="front">
+                            <h4>Ada Tech School</h4>
+                            <div class="date">Octobre 2022 - Juillet 2024</div>
+                        </div>
+                        <div class="back">
+                            <div class="description">École d'informatique inclusive, où on apprend à coder avec une pédagogie alternative.</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="formation">
-                    <h4>École supérieure du commerce extérieur</h4>
-                    <div class="date">Septembre 2010 - Juillet 2015</div>
-                    <div class="description">École de commerce en cinq ans délivrant le grade de Master.</div>
+                <div class="cardBox">
+                    <div class="card">
+                        <div class="front">
+                            <h4>École supérieure du commerce extérieur</h4>
+                            <div class="date">Septembre 2010 - Juillet 2015</div>
+                        </div>
+                        <div class="back">
+                            <div class="description">École de commerce en cinq ans délivrant le grade de Master.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            
             <h3>Formations courtes</h3>
             <div class="formations">
-                <div class="formation">
-                    <h4>Mesurer sa performance sur les&nbspmédias sociaux</h4>
-                    <div class="date">Octobre 2021 | ABILWAYS</div>
-                    <div class="description"></div>
-                    <div class="description">Comprendre l'importance de mettre en place un reporting, définir ses indicateurs et créer ses tableaux de bord.</div>
-                    
+                <div class="cardBox">
+                    <div class="card">
+                        <div class="front">
+                            <h4>Mesurer sa performance sur les&nbspmédias sociaux</h4>
+                            <div class="date">Octobre 2021 | ABILWAYS</div>
+                        </div>
+                        <div class="back">
+                            <div class="description">Comprendre l'importance de mettre en place un reporting, définir ses indicateurs et créer ses tableaux de bord.</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="formation">
-                    <h4>Créez votre site web avec HTML5 et CSS3</h4>
-                    <div class="date">Février 2020 | OpenClassroom</div>
-                    <div class="description">Maîtriser les bases de HTML5 ; faire de la mise en forme avec CSS3 ; agencer le contenu des pages ; utiliser des fonctionnalités avancées de HTML et CSS.</div>
+                <div class="cardBox">
+                    <div class="card">
+                        <div class="front">
+                            <h4>Créez votre site web avec HTML5 et CSS3</h4>
+                            <div class="date">Février 2020 | OpenClassroom</div>
+                        </div>
+                        <div class="back">
+                            <div class="description">Maîtriser les bases de HTML5 ; faire de la mise en forme avec CSS3 ; agencer le contenu des pages ; utiliser des fonctionnalités avancées de HTML et CSS.</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="formation">
-                    <h4>L'essentiel d'InDesign</h4>
-                    <div class="date">Novembre 2019 | PYRAMYD</div>
-                    <div class="description">Maîtriser les fonctionnalités essentielles à la création et la correction d'un document (gabarit, calque, typographie, page, style...).</div>
+                <div class="cardBox">
+                    <div class="card">
+                        <div class="front">
+                            <h4>L'essentiel d'InDesign</h4>
+                            <div class="date">Novembre 2019 | PYRAMYD</div>
+                        </div>
+                        <div class="back">
+                            <div class="description">Maîtriser les fonctionnalités essentielles à la création et la correction d'un document (gabarit, calque, typographie, page, style...).</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -161,7 +221,9 @@
     
 
     <!-- JAVASCRIPT -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="module"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>
 </html>

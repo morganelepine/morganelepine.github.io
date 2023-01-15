@@ -1,20 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Oswald:wght@300&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
 
 body
 {
     /*padding: 2%; 2% de la page*/
     margin: 0;
-    font-family: 'Noto Sans', sans-serif;
-    background-color: #f7f7f7;
-    color: #102542;
+    font-family: 'PT Sans', sans-serif;
+    background-color: #F8EFEA;
+    color: #111C59;
+}
+
+
+/* PARALLAX EFFECT */
+
+.parallax1{
+    background: url("../img/fleurs/pexels-secret-garden-931177-horizontal.jpg");
+}
+
+.parallax2{
+    background: url("../img/fleurs/pexels-secret-garden-931177-horizontal-30.png");
+}
+
+.parallax {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh; /* Prendra 100% de la hauteur du viewport, et donc de l'écran */
 }
 
 
 /* BANDEAU NAVIGATION */
 
+/*Menu V1*/
+
 nav
 {
-    padding: 1%;
+    padding: 0.5%;
     display: flex; /*on dit qu'on va utiliser les flexbox*/
     flex-direction: row;
     flex-wrap: wrap; /*passer à la ligne lorsque les éléments ne rentrent pas*/
@@ -22,7 +44,7 @@ nav
     align-items: center;
     position: sticky; /*reste au dessus de la page*/
     top:0; /*en haut de l'écran*/
-    background-color: #f7f7f7;
+    background-color: #F8EFEA;
 }
 
 nav .profile
@@ -33,13 +55,12 @@ nav .profile
 
 nav .profile img
 {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
 
 nav h1
-/*Morgane LU*/
 {
     margin-left: 10px;
     font-size: 1.5vw; /*view with = 6% de la largeur de la page*/
@@ -55,49 +76,147 @@ nav a
 {
     margin-left: 20px;
     cursor: pointer;
-    background-color: #f87060;
-    box-shadow: 3px 3px #102542;
+    background-color: #E0475B;
+    box-shadow: 3px 3px #111C59;
     border-radius: 20px;
     padding: 10px;
     color: white;
     text-decoration: none;
     margin-left: 20px;
     font-size: 14px;
-
+    font-family: 'Bebas Neue', cursive;;
 }
 
 nav a:hover{
-    background-color: #102542;
-    box-shadow: 3px 3px #f87060;
+    background-color: #111C59;
+    box-shadow: 3px 3px #E0475B;
 }
 
+/*Menu au scroll*/
+
+#menuScroll, .navScroll, .menu {
+    display: flex;
+    align-items: center;
+}
+
+.navScroll {
+    position: relative;
+    background-color: #102542;
+    padding: 10px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.navScroll input:checked ~ .menu {
+    width: 630px;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.menu li a:hover {
+    color: #E0475B;
+}
+
+.navScroll input {
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.navScroll span {
+    position: absolute;
+    left: 23px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: white;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.navScroll input:checked ~ span {
+    background-color: #E0475B;
+}
+
+.navScroll span:nth-child(2) {
+    transform: translateY(-8px);
+}
+
+.navScroll input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.navScroll span:nth-child(3) {
+    transform: translateY(8px);
+}
+
+.navScroll input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
 
 
 /* HEADER */
 
-.header
+#header
 {
+    display: flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.header h1
+#titreHeader
+{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#header h1
 {
     margin: 0;
     padding: 20px;
     text-transform: uppercase;
-    text-shadow: 3px 3px #F7E579;
-    letter-spacing: 3px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 6vw; /*view with = 6% de la largeur de la page*/
+    color: white;
+    text-shadow: 5px 5px #102542;
+    letter-spacing: 6px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 8vw; /*view with = 6% de la largeur de la page*/
 }
 
-.header p
-{
-    line-height: 30px;
-    color: grey;
+#header h2{
+    margin: 0;
+    color: 102542;
+    text-shadow: 3px 3px white;
+    letter-spacing: 6px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
 }
 
-.header button
+#header button
 {
     background-color: inherit;
     border: none;
@@ -109,7 +228,7 @@ nav a:hover{
     cursor: pointer;
 }
 
-.header button:hover
+#header button:hover
 {
     color: grey;
     border-bottom-color: black;
@@ -120,32 +239,44 @@ nav a:hover{
 
 .page-content h2
 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 40px;
-    text-align: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid black;
-    letter-spacing: 5px;
+    font-family: 'Arvo', serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-left: 30px;
+    margin: 0 0 40px 0;
+    letter-spacing: 3px;
+
+    background: linear-gradient(transparent 50%, #F7E579 50%, #F7E579 85%, transparent 75%, transparent 100%);
+      background-repeat: no-repeat;
+      background-size: 0% 50%;
+      animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
+}
+
+@keyframes animatedBackground {
+    to {
+        background-size: 100% 100%;
+    }
 }
 
 .page-content h3
 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 25px;
+    font-family: 'Arvo', serif;
+    text-transform: uppercase;
+    font-size: 22px;
     text-align: center;
 }
 
 .page-content h4
 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
     text-align: center;
     margin: 0;
 }
 
 .page-content .description
 {
-    font-size: 14px;    
+    font-size: 16px;    
 }
 
 .page-content ul
@@ -157,21 +288,37 @@ nav a:hover{
 
 .page-content .date
 {
-    font-size: 12px;
+    font-size: 14px;
     color: grey;
     font-style: italic;
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 15px;
     text-align: center;
 }
 
 
-/* CONTENU DE LA PAGE : projets */
+/* CONTENU DE LA PAGE : organisation des div */
 
-.page-content .section-projets
+.section-projets, .section-pro, .section-education
 {
-    margin-top: 10%;
+    padding: 10% 0 0 0;
+    /* height: 100vh; */
 }
+
+/*
+.page-content {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.page-content > section {
+    scroll-snap-align: start;
+}
+*/
+
+
+/* CONTENU DE LA PAGE : projets */
 
 .page-content .section-projets .projets
 {
@@ -193,7 +340,7 @@ nav a:hover{
     font-size: 12px;
     text-align: center;
     font-weight: bold;
-    color:#102542;
+    color:#111C59;
     background-color:#F7E579;
     border-radius: 10px;
     padding: 6px;
@@ -210,13 +357,6 @@ nav a:hover{
 
 /* CONTENU DE LA PAGE : expériences pro */
 
-.page-content .section-pro
-{
-    background-color: #F7E579;
-    padding-top: 5px;
-    margin-top: 100px;
-}
-
 .page-content .section-pro .jobs
 {
     display: flex;
@@ -228,10 +368,7 @@ nav a:hover{
 .page-content .section-pro .jobs .job
 {
     max-width: 250px;
-    padding: 30px;
     margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -249,13 +386,7 @@ nav a:hover{
 }
 
 
-
 /* CONTENU DE LA PAGE : formations */
-
-.page-content .section-education
-{
-    margin-top: 10%;
-}
 
 .page-content .section-education .formations
 {
@@ -264,33 +395,75 @@ nav a:hover{
     justify-content: center;
 }
 
-.page-content .section-education .formations .formation
-{
-    max-width: 250px;
-    background-color: #F7E579;
-    box-shadow: 4px 4px #102542;
-    border-radius: 20px;
+.cardBox {
+    margin: 0% 2% 0 2%;
+    perspective: 800px;
+    transition: all 0.3s ease 0s;
+    width: 300px;
+  }
+  
+  .cardBox:hover .card {
+    transform: rotateY( 180deg);
+  }
+  
+  .card {
+    width: 100%;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    -webkit-animation: giro 2.5s 1;
+    animation: giro 2.5s 1;
+  }
+  
+  .card .front,
+  .card .back {
+    position: absolute;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    /* display: block; */
+    height: 100%;
+    width: 100%;
     padding: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
     text-align: center;
-}
-
-.page-content .section-education .formations .formation:hover
-{
+    border-radius: 20px;
+  }
+  
+  .card .front{
+    color: #111C59;
+    background-color: #F7E579;
+    box-shadow: 4px 4px #111C59;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;  
+  }
+  
+  .card .back {
+    transform: rotateY( 180deg);
     color: white;
-    background-color: #102542;
+    background-color: #111C59;
     box-shadow: 3px 3px #F7E579;
-}
-
-.page-content .section-education .formations .formation img
-{
-    height: 30px;
-    border-radius: 10%;
-    padding: 5px;
-    background-color: white;
-}
+    display:flex;
+    flex-direction: column;
+    justify-content: center;  
+  }
+  
+  @-webkit-keyframes giro {
+    from {
+      transform: rotateY( 180deg);
+    }
+    to {
+      transform: rotateY( 0deg);
+    }
+  }
+  
+  @keyframes giro {
+    from {
+      transform: rotateY( 180deg);
+    }
+    to {
+      transform: rotateY( 0deg);
+    }
+  }
 
 
 /* FOOTER */
@@ -311,7 +484,7 @@ footer
 {
     font-size: 12px;
     cursor: pointer;
-    background-color: #f87060;
+    background-color: #E0475B;
     /*box-shadow: 3px 3px white;*/
     border-radius: 20px;
     padding: 10px;
@@ -363,6 +536,3 @@ footer
         max-width: 80%;
     }
 }
-
-
-
