@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
+@font-face {
+    font-family: "Happy-Day";
+    src: url("/fonts/Happy-Day.ttf") format(‘truetype’);
+}
 
 body
 {
@@ -212,7 +216,7 @@ nav a:hover{
     color: 102542;
     text-shadow: 3px 3px white;
     letter-spacing: 6px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', cursive;;
     font-size: 50px;
 }
 
@@ -239,12 +243,13 @@ nav a:hover{
 
 .page-content h2
 {
-    font-family: 'Arvo', serif;
+    /* font-family: 'Arvo', serif; */
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 10px;
     font-size: 50px;
     text-transform: uppercase;
     padding-left: 30px;
     margin: 0 0 40px 0;
-    letter-spacing: 3px;
 
     background: linear-gradient(transparent 50%, #F7E579 50%, #F7E579 85%, transparent 75%, transparent 100%);
       background-repeat: no-repeat;
@@ -260,7 +265,9 @@ nav a:hover{
 
 .page-content h3
 {
-    font-family: 'Arvo', serif;
+    /* font-family: 'Arvo', serif; */
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 22px;
     text-align: center;
@@ -269,7 +276,7 @@ nav a:hover{
 .page-content h4
 {
     font-family: 'Lato', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     margin: 0;
 }
@@ -367,7 +374,7 @@ nav a:hover{
 
 .page-content .section-pro .jobs .job
 {
-    max-width: 250px;
+    max-width: 350px;
     margin-left: 20px;
     text-align: center;
 }
@@ -375,6 +382,12 @@ nav a:hover{
 .page-content .section-pro .jobs .job ul
 {
     text-align: left;
+    font-size: 16px;
+}
+
+.page-content .section-pro .jobs .job li
+{
+    padding: 5px 0 5px 0;
 }
 
 .page-content .section-pro .jobs .job img
