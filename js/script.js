@@ -17,6 +17,77 @@ $(window).on("scroll touchmove", function() {
     };
 });
 
+
+//Faire apparaître les projets au passage de la souris
+
+//-----PICO 8
+document.getElementById("middlePico").addEventListener("mouseover", () => {
+  document.getElementById("leftPico").style.opacity = 1;
+  document.getElementById("rightPico").style.opacity = 1;
+  document.getElementById("leftPico").style.width = "300px";
+  document.getElementById("rightPico").style.width = "300px";
+});
+
+document.getElementById("middlePico").addEventListener("mouseout", () => {
+  document.getElementById("leftPico").style.opacity = 0;
+  document.getElementById("rightPico").style.opacity = 0;
+  document.getElementById("leftPico").style.width = "0px";
+  document.getElementById("rightPico").style.width = "0px";
+});
+
+//-----API
+document.getElementById("middleAPI").addEventListener("mouseover", () => {
+  document.getElementById("leftAPI").style.opacity = 1;
+  document.getElementById("rightAPI").style.opacity = 1;
+  document.getElementById("leftAPI").style.width = "300px";
+  document.getElementById("rightAPI").style.width = "300px";
+});
+
+document.getElementById("middleAPI").addEventListener("mouseout", () => {
+  document.getElementById("leftAPI").style.opacity = 0;
+  document.getElementById("rightAPI").style.opacity = 0;
+  document.getElementById("leftAPI").style.width = "0px";
+  document.getElementById("rightAPI").style.width = "0px";
+});
+
+//-----MASTERMIND
+document.getElementById("middleMastermind").addEventListener("mouseover", () => {
+  document.getElementById("leftMastermind").style.opacity = 1;
+  document.getElementById("rightMastermind").style.opacity = 1;
+  document.getElementById("leftMastermind").style.width = "300px";
+  document.getElementById("rightMastermind").style.width = "300px";
+});
+
+document.getElementById("middleMastermind").addEventListener("mouseout", () => {
+  document.getElementById("leftMastermind").style.opacity = 0;
+  document.getElementById("rightMastermind").style.opacity = 0;
+  document.getElementById("leftMastermind").style.width = "0px";
+  document.getElementById("rightMastermind").style.width = "0px";
+});
+
+//-----EXTENSION
+document.getElementById("middleExtension").addEventListener("mouseover", () => {
+  document.getElementById("leftExtension").style.opacity = 1;
+  document.getElementById("rightExtension").style.opacity = 1;
+  document.getElementById("leftExtension").style.width = "300px";
+  document.getElementById("rightExtension").style.width = "300px";
+});
+
+document.getElementById("middleExtension").addEventListener("mouseout", () => {
+  document.getElementById("leftExtension").style.opacity = 0;
+  document.getElementById("rightExtension").style.opacity = 0;
+  document.getElementById("leftExtension").style.width = "0px";
+  document.getElementById("rightExtension").style.width = "0px";
+});
+
+
+
+
+
+
+
+
+
 //Quand on scroll à 200px du haut de la page, le menu de nagation disparaît
 /*
 window.onscroll = function() {scrollFunction()};
