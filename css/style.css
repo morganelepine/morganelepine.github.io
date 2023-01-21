@@ -11,7 +11,7 @@ body
     margin: 0;
     font-family: 'PT Sans', sans-serif;
     background-color: #F8EFEA;
-    color: #111C59;
+    color: #102542;
 }
 
 
@@ -81,7 +81,7 @@ nav a
     margin-left: 20px;
     cursor: pointer;
     background-color: #E0475B;
-    box-shadow: 3px 3px #111C59;
+    box-shadow: 3px 3px #102542;
     border-radius: 20px;
     padding: 10px;
     color: white;
@@ -92,7 +92,7 @@ nav a
 }
 
 nav a:hover{
-    background-color: #111C59;
+    background-color: #102542;
     box-shadow: 3px 3px #E0475B;
 }
 
@@ -110,36 +110,10 @@ nav a:hover{
     transition: 0.5s;
     border-radius: 50px;
     overflow: hidden;
-    box-shadow: 0 8px 15px rgba(0,0,0,.2);
-}
-
-.menu {
-    margin: 0;
-    padding: 0;
-    width: 0;
-    overflow: hidden;
-    transition: 0.5s;
 }
 
 .navScroll input:checked ~ .menu {
-    width: 630px;
-}
-
-.menu li {
-    list-style: none;
-    margin: 0 15px;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 700;
-    transition: 0.5s;
-}
-
-.menu li a:hover {
-    color: #E0475B;
+    width: auto;
 }
 
 .navScroll input {
@@ -163,20 +137,42 @@ nav a:hover{
 .navScroll input:checked ~ span {
     background-color: #E0475B;
 }
-
 .navScroll span:nth-child(2) {
     transform: translateY(-8px);
 }
-
 .navScroll input:checked ~ span:nth-child(2) {
     transform: translateY(0) rotate(-45deg);
 }
 .navScroll span:nth-child(3) {
     transform: translateY(8px);
 }
-
 .navScroll input:checked ~ span:nth-child(3) {
     transform: translateY(0) rotate(45deg);
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.5s; /*pour le hover*/
+}
+
+.menu li a:hover {
+    color: #E0475B;
 }
 
 
@@ -205,10 +201,10 @@ nav a:hover{
     padding: 20px;
     text-transform: uppercase;
     color: white;
-    text-shadow: 5px 5px #102542;
+    text-shadow: 6px 6px #102542;
     letter-spacing: 6px;
     font-family: 'Bebas Neue', cursive;
-    font-size: 150px;
+    font-size: 140px;
 }
 
 #header h2{
@@ -218,24 +214,6 @@ nav a:hover{
     letter-spacing: 6px;
     font-family: 'Bebas Neue', cursive;;
     font-size: 50px;
-}
-
-#header button
-{
-    background-color: inherit;
-    border: none;
-    outline: none; /*pas de contour lorsqu'on clique*/
-    padding: 0; /*pas de marge à l'intérieur du bouton*/
-    font-weight: bold;
-    padding-bottom: 5px;
-    border-bottom: 1px solid grey;
-    cursor: pointer;
-}
-
-#header button:hover
-{
-    color: grey;
-    border-bottom-color: black;
 }
 
 
@@ -306,64 +284,61 @@ nav a:hover{
 
 /* CONTENU DE LA PAGE : organisation des div */
 
+.page-content{
+    display: flex;
+    flex-direction: column;
+}
+
 .section-projets, .section-pro, .section-education
 {
     padding: 10% 0 0 0;
 }
 
-.section-pro, .section-education
-{
-    height: 100vh;
-}
-
-/*
-.page-content {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-}
-
-.page-content > section {
-    scroll-snap-align: start;
-}
-*/
-
 
 /* CONTENU DE LA PAGE : projets */
 
-.page-content .section-projets .projets
-{
+.projects{
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 5px;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+    height: 300px;  
 }
 
-.page-content .section-projets .projets .projet
-{
-    max-width: 200px;
-    margin-bottom: 30px;
-    text-align: center;
+.left, .middle, .right{
+    width: 300px;
 }
 
-.page-content .section-projets .projets .projet .langage
-{
-    font-size: 12px;
-    text-align: center;
-    font-weight: bold;
-    color:#111C59;
+.middle{
+    padding: 0 50px 0 50px;
+    color: white;
+    background-color:#102542;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.middle:hover{
+    color: #102542;
     background-color:#F7E579;
-    border-radius: 10px;
-    padding: 6px;
-    margin-top:10px;
 }
 
-.page-content #projets img
-{
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 20px;
+.middle .content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
+
+.left, .right{
+    opacity: 0;
+    width: 0px;
+    transition: 0.3s ease-in-out all;
+}
+
+.projects img{
+    height: 100%;
+}
+
 
 
 /* CONTENU DE LA PAGE : expériences pro */
@@ -446,9 +421,9 @@ nav a:hover{
   }
   
   .card .front{
-    color: #111C59;
+    color: #102542;
     background-color: #F7E579;
-    box-shadow: 4px 4px #111C59;
+    box-shadow: 4px 4px #102542;
     display:flex;
     flex-direction: column;
     justify-content: center;  
@@ -457,7 +432,7 @@ nav a:hover{
   .card .back {
     transform: rotateY( 180deg);
     color: white;
-    background-color: #111C59;
+    background-color: #102542;
     box-shadow: 3px 3px #F7E579;
     display:flex;
     flex-direction: column;
@@ -515,81 +490,24 @@ footer
 
 
 
-
-
-
-
-/*TEST*/
-
-.projects{
-    margin: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 300px;  
-}
-
-.left, .middle, .right{
-    width: 300px;
-}
-
-.middle{
-    padding: 0 50px 0 50px;
-    background-color:#F7E579;
-    display: flex;
-    align-items: center;
-    z-index: 2;
-}
-
-.middle .content{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.left, .right{
-    opacity: 0;
-    width: 0px;
-    transition: 0.3s ease-in-out all;
-}
-
-.projects img{
-    height: 100%;
-}
-
-
-
-
-
 /*ne s'exécute que quand la largeur d'écran est <= 700px*/
 
 @media screen and (max-width:700px)
 {
-    .navScroll, .menu {
-        flex-direction: column;
-    }
-    .navScroll input:checked ~ .menu {
-        width: 200px;
-    }
-    #menuScroll, li {
-        padding: 5px;
-    }
-    .navScroll input {
-        width: 20px;
-        height: 20px;
-    }
-    .navScroll span {
-        left: 50%;
-        width: 20px;
+    .navScroll {
+        display: none;
     }
 
     h1{
-        font-size: 80px !important;
+        font-size: 70px !important;
+        text-shadow: 5px 5px #102542 !important;
+        letter-spacing: 4px;
     }
 
     header h2{
-        font-size: 40px !important;
-        text-shadow: 2px 2px white !important;
+        font-size: 30px !important;
+        text-shadow: 1.5px 1.5px white !important;
+        letter-spacing: 1px;
     }
 
     .page-content h2{
@@ -602,22 +520,35 @@ footer
         max-width: 100%;
     }
 
+    .middle{
+        padding: 0 20px 0 20px;
+    }    
+
+    .right{
+        display: none;
+    }
+    
     .page-content .section-pro .jobs .job{
-        max-width: 100%;
+        max-width: 80%;
     }
 
     .page-content .section-education .formations .formation{
-        max-width: 100%;
+        max-width: 80%;
     }
 
     .content h3, p{
         margin: 0;  
     }
 
+    p{
+        padding-bottom: 10px;
+    }
+
     footer{
-        justify-content: flex-start;
+        flex-direction: column;
         justify-content: center;
-        text-align: center;
+        align-items: center;
+        padding-bottom: 30px;
     }
     footer .colonne{
         max-width: 80%;
