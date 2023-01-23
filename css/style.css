@@ -243,12 +243,13 @@ nav a:hover{
 
 .page-content h3
 {
-    /* font-family: 'Arvo', serif; */
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 3px;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 36px;
     text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
 }
 
 .page-content h4
@@ -271,13 +272,13 @@ nav a:hover{
     margin-left: 1.2em;
 }
 
-.page-content .date
+.date
 {
     font-size: 14px;
-    color: grey;
+    color: rgb(85, 85, 85);
     font-style: italic;
+    margin: 0;
     padding-top: 10px;
-    padding-bottom: 15px;
     text-align: center;
 }
 
@@ -291,8 +292,13 @@ nav a:hover{
 
 .section-projets, .section-pro, .section-education
 {
-    padding: 10% 0 0 0;
+    margin: 0 0 10% 0; /*bottom*/
 }
+
+/* .section-pro, .section-education
+{
+    height:100vh;
+} */
 
 
 /* CONTENU DE LA PAGE : projets */
@@ -343,45 +349,19 @@ nav a:hover{
 
 /* CONTENU DE LA PAGE : expériences pro */
 
-.page-content .section-pro .jobs
+.experiencesPro li
 {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 5px;
-    justify-content: space-evenly;
-}
-
-.page-content .section-pro .jobs .job
-{
-    max-width: 350px;
-    margin-left: 20px;
-    text-align: center;
-}
-
-.page-content .section-pro .jobs .job ul
-{
+    font-size: 18px;
     text-align: left;
-    font-size: 16px;
-}
-
-.page-content .section-pro .jobs .job li
-{
-    padding: 5px 0 5px 0;
-}
-
-.page-content .section-pro .jobs .job img
-{
-    height: 30px;
-    border-radius: 10%;
-    padding: 5px;
-    background-color: white;
+    padding: 10px 0 10px 0;
 }
 
 
 /* CONTENU DE LA PAGE : formations */
 
-.page-content .section-education .formations
-{
+/* CARTES QUI SE RETOURNENT */
+
+.formations, .experiencesPro {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -391,24 +371,36 @@ nav a:hover{
     margin: 2%;
     perspective: 800px;
     transition: all 0.3s ease 0s;
-    width: 300px;
-  }
-  
-  .cardBox:hover .card {
+}
+        .formations .cardBox {
+            width: 300px;
+        }
+
+        .experiencesPro .cardBox {
+            width: 430px;
+        }
+        
+.cardBox:hover .card {
     transform: rotateY( 180deg);
-  }
+}
   
-  .card {
+.card {
     width: 100%;
-    height: 200px;
     transform-style: preserve-3d;
     transition: transform 0.4s ease 0s;
     -webkit-animation: giro 2.5s 1;
     animation: giro 2.5s 1;
-  }
-  
-  .card .front,
-  .card .back {
+}
+        .formations .card {
+            height: 200px;
+        }
+        
+        .experiencesPro .card {
+            height: 450px;
+        }
+
+.card .front,
+.card .back {
     position: absolute;
     backface-visibility: hidden;
     box-sizing: border-box;
@@ -418,51 +410,63 @@ nav a:hover{
     padding: 30px;
     text-align: center;
     border-radius: 20px;
-  }
+ }
   
-  .card .front{
-    color: #102542;
-    background-color: #F7E579;
-    box-shadow: 4px 4px #102542;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;  
-  }
+        .card .front{
+            color: #102542;
+            background-size: cover;
+            box-shadow: 4px 4px #102542;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  
+        }
+                .card #hed{
+                    background-image : url("../img/fleurs/AdobeStock_209206510-50.png");
+                }
+                .card #hatier{
+                    background-image : url("../img/fleurs/pexels-angello-4019143-50.png");
+                }
+                .card #robert{
+                    background-image : url("../img/fleurs/AdobeStock_381443377-50.png");
+                }
+                .card .formation{
+                    background-color: #F7E579;
+                }
+        
+        .card .back{
+            transform: rotateY( 180deg);
+            color: white;
+            background-color: #102542;
+            box-shadow: 3px 3px #F7E579;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  
+        }
   
-  .card .back {
-    transform: rotateY( 180deg);
-    color: white;
-    background-color: #102542;
-    box-shadow: 3px 3px #F7E579;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;  
-  }
-  
-  @-webkit-keyframes giro {
+@-webkit-keyframes giro {
     from {
       transform: rotateY( 180deg);
     }
     to {
       transform: rotateY( 0deg);
     }
-  }
+}
   
-  @keyframes giro {
+@keyframes giro {
     from {
       transform: rotateY( 180deg);
     }
     to {
       transform: rotateY( 0deg);
     }
-  }
+}
+
 
 
 /* FOOTER */
 
 footer
 {
-    margin-top: 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
