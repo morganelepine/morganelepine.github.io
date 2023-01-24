@@ -352,7 +352,7 @@ nav a:hover{
 {
     font-size: 18px;
     text-align: left;
-    padding: 10px 0 10px 0;
+    padding: 8px 0 8px 0;
 }
 
 
@@ -395,7 +395,7 @@ nav a:hover{
         }
         
         .experiencesPro .card {
-            height: 450px;
+            height: 430px;
         }
 
 .card .front,
@@ -538,9 +538,14 @@ footer
         padding-bottom: 10px;
     }
 
+    .experiencesPro .card {
+        height: 400px;
+    }
+
     .experiencesPro li
     {
         font-size: 16px;
+        padding: 5px 0 5px 0;
     }
 
     footer{
