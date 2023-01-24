@@ -249,7 +249,7 @@ nav a:hover{
     font-size: 36px;
     text-align: center;
     margin: 0;
-    padding-bottom: 10px;
+    padding: 10px 0 10px 0;
 }
 
 .page-content h4
@@ -267,7 +267,6 @@ nav a:hover{
 
 .page-content ul
 {
-    font-size: 14px;
     padding: 0;
     margin-left: 1.2em;
 }
@@ -292,7 +291,7 @@ nav a:hover{
 
 .section-projets, .section-pro, .section-education
 {
-    margin: 0 0 10% 0; /*bottom*/
+    margin: 5% 0 5% 0; /*bottom*/
 }
 
 /* .section-pro, .section-education
@@ -308,11 +307,11 @@ nav a:hover{
     flex-direction: row;
     justify-content: center;
     margin: 30px;
-    height: 300px;  
+    height: 400px;  
 }
 
 .left, .middle, .right{
-    width: 300px;
+    width: 400px;
 }
 
 .middle{
@@ -498,7 +497,7 @@ footer
 
 @media screen and (max-width:700px)
 {
-    .navScroll {
+    .navScroll{
         display: none;
     }
 
@@ -519,9 +518,8 @@ footer
         letter-spacing: 5px !important;
     }
 
-    .page-content header{ /*occupe 100% de la taille*/
-        margin-top: 10px;
-        max-width: 100%;
+    .cardBox {
+        margin: 4%;
     }
 
     .middle{
@@ -531,14 +529,6 @@ footer
     .right{
         display: none;
     }
-    
-    .page-content .section-pro .jobs .job{
-        max-width: 80%;
-    }
-
-    .page-content .section-education .formations .formation{
-        max-width: 80%;
-    }
 
     .content h3, p{
         margin: 0;  
@@ -546,6 +536,11 @@ footer
 
     p{
         padding-bottom: 10px;
+    }
+
+    .experiencesPro li
+    {
+        font-size: 16px;
     }
 
     footer{
