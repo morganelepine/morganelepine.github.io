@@ -307,20 +307,32 @@ nav a:hover{
     flex-direction: row;
     justify-content: center;
     margin: 30px;
-    height: 400px;  
+    height: 300px;  
 }
 
-.left, .middle, .right{
-    width: 400px;
+.left, .right{
+    opacity: 0;
+    width: 0px;
+    transition: 0.3s ease-in-out all;
+}
+
+.left img{
+    border-radius: 20px 0 0 20px;
+}
+
+.right img{
+    border-radius: 0 20px 20px 0;
 }
 
 .middle{
+    width: 300px;
     padding: 0 50px 0 50px;
     color: white;
     background-color:#102542;
     display: flex;
     align-items: center;
     z-index: 2;
+    border-radius: 20px;
 }
 
 .middle:hover{
@@ -334,12 +346,6 @@ nav a:hover{
     text-align: center;
 }
 
-.left, .right{
-    opacity: 0;
-    width: 0px;
-    transition: 0.3s ease-in-out all;
-}
-
 .projects img{
     height: 100%;
 }
@@ -350,7 +356,7 @@ nav a:hover{
 
 .experiencesPro li
 {
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
     padding: 8px 0 8px 0;
 }
@@ -376,7 +382,7 @@ nav a:hover{
         }
 
         .experiencesPro .cardBox {
-            width: 430px;
+            width: 400px;
         }
         
 .cardBox:hover .card {
@@ -395,7 +401,7 @@ nav a:hover{
         }
         
         .experiencesPro .card {
-            height: 430px;
+            height: 400px;
         }
 
 .card .front,
