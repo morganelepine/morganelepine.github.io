@@ -41,7 +41,7 @@ document.getElementById("middleAPI").addEventListener("mouseover", () => {
   document.getElementById("leftAPI").style.opacity = 1;
   document.getElementById("rightAPI").style.opacity = 1;
   document.getElementById("leftAPI").style.width = "480px";
-  document.getElementById("rightAPI").style.width = "480px";
+  document.getElementById("rightAPI").style.width = "300px";
   document.getElementById("middleAPI").style.borderRadius = "0px";
 });
 
@@ -57,7 +57,7 @@ document.getElementById("middleAPI").addEventListener("mouseout", () => {
 document.getElementById("middleMastermind").addEventListener("mouseover", () => {
   document.getElementById("leftMastermind").style.opacity = 1;
   document.getElementById("rightMastermind").style.opacity = 1;
-  document.getElementById("leftMastermind").style.width = "480px";
+  document.getElementById("leftMastermind").style.width = "300px";
   document.getElementById("rightMastermind").style.width = "480px";
   document.getElementById("middleMastermind").style.borderRadius = "0px";
 });
@@ -75,7 +75,7 @@ document.getElementById("middleExtension").addEventListener("mouseover", () => {
   document.getElementById("leftExtension").style.opacity = 1;
   document.getElementById("rightExtension").style.opacity = 1;
   document.getElementById("leftExtension").style.width = "480px";
-  document.getElementById("rightExtension").style.width = "480px";
+  document.getElementById("rightExtension").style.width = "300px";
   document.getElementById("middleExtension").style.borderRadius = "0px";
 });
 
