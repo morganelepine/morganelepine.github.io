@@ -1,4 +1,5 @@
 //Changer la couleur du background selon la section
+/*
 let one = "#f8ebe0";
 let two = "#F9B3AC";
 let three = "#f87060";
@@ -14,6 +15,7 @@ $(window).on("scroll touchmove", function() {
     $('body').css('background', $(".three").attr("data-color"))
   };
 });
+*/
 
 
 
