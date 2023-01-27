@@ -59,8 +59,8 @@ document.getElementById("middleAPI").addEventListener("mouseout", () => {
 document.getElementById("middleMastermind").addEventListener("mouseover", () => {
   document.getElementById("leftMastermind").style.opacity = 1;
   document.getElementById("rightMastermind").style.opacity = 1;
-  document.getElementById("leftMastermind").style.width = "300px";
-  document.getElementById("rightMastermind").style.width = "480px";
+  document.getElementById("leftMastermind").style.width = "480px";
+  document.getElementById("rightMastermind").style.width = "300px";
   document.getElementById("middleMastermind").style.borderRadius = "0px";
 });
 
@@ -100,19 +100,44 @@ mediaQuerySmall.addEventListener('change', responsive);
 //l'événement CHANGE est déclenché et appelle la fonction RESPONSIVE dès que l’état de la propriété MATCHES change
 
 function responsive(){
-  //if (mediaQuerySmall.matches) {
     document.getElementById("middleExtension").addEventListener("mouseover", () => {
       document.getElementById("rightExtension").style.display = "none";
-      document.getElementById("contenu").style.display = "none";
+      document.getElementById("contenuExtension").style.display = "none";
 
     });
     document.getElementById("middleExtension").addEventListener("mouseout", () => {
       document.getElementById("rightExtension").style.display = "none";
-      document.getElementById("contenu").style.display = "block";
+      document.getElementById("contenuExtension").style.display = "block";
     });
-  //}
+
+    document.getElementById("middleMastermind").addEventListener("mouseover", () => {
+      document.getElementById("rightMastermind").style.display = "none";
+      document.getElementById("contenuMastermind").style.display = "none";
+    });
+    document.getElementById("middleMastermind").addEventListener("mouseout", () => {
+      document.getElementById("rightMastermind").style.display = "none";
+      document.getElementById("contenuMastermind").style.display = "block";
+    });
+
+    document.getElementById("middleAPI").addEventListener("mouseover", () => {
+      document.getElementById("rightAPI").style.display = "none";
+      document.getElementById("contenuAPI").style.display = "none";
+    });
+    document.getElementById("middleAPI").addEventListener("mouseout", () => {
+      document.getElementById("rightAPI").style.display = "none";
+      document.getElementById("contenuAPI").style.display = "block";
+    });
+    
+    document.getElementById("middlePico").addEventListener("mouseover", () => {
+      document.getElementById("rightPico").style.display = "none";
+      document.getElementById("contenuPico").style.display = "none";
+    });
+    document.getElementById("middlePico").addEventListener("mouseout", () => {
+      document.getElementById("rightPico").style.display = "none";
+      document.getElementById("contenuPico").style.display = "block";
+    });
 }
-responsive(/*mediaQuerySmall*/)
+responsive()
 
 
 
