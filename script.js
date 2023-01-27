@@ -91,7 +91,28 @@ document.getElementById("middleExtension").addEventListener("mouseout", () => {
 
 
 
+//----------------SECTION PROJETS RESPONSIVE
 
+const mediaQuerySmall = window.matchMedia("(max-width: 750px)") //the view port is at max 750 pixels wide
+console.log(mediaQuerySmall.matches) //affiche TRUE lorsque la fenêtre faig 800px max
+
+mediaQuerySmall.addEventListener('change', responsive);
+//l'événement CHANGE est déclenché et appelle la fonction RESPONSIVE dès que l’état de la propriété MATCHES change
+
+function responsive(){
+  //if (mediaQuerySmall.matches) {
+    document.getElementById("middleExtension").addEventListener("mouseover", () => {
+      document.getElementById("rightExtension").style.display = "none";
+      document.getElementById("contenu").style.display = "none";
+
+    });
+    document.getElementById("middleExtension").addEventListener("mouseout", () => {
+      document.getElementById("rightExtension").style.display = "none";
+      document.getElementById("contenu").style.display = "block";
+    });
+  //}
+}
+responsive(/*mediaQuerySmall*/)
 
 
 
