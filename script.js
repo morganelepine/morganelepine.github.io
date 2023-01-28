@@ -25,8 +25,8 @@ $(window).on("scroll touchmove", function() {
 document.getElementById("middlePico").addEventListener("mouseover", () => {
   document.getElementById("leftPico").style.opacity = 1;
   document.getElementById("rightPico").style.opacity = 1;
-  document.getElementById("leftPico").style.width = "300px";
-  document.getElementById("rightPico").style.width = "300px";
+  document.getElementById("leftPico").style.width = "400px";
+  document.getElementById("rightPico").style.width = "400px";
   document.getElementById("middlePico").style.borderRadius = "0px";
 });
 
@@ -42,8 +42,8 @@ document.getElementById("middlePico").addEventListener("mouseout", () => {
 document.getElementById("middleAPI").addEventListener("mouseover", () => {
   document.getElementById("leftAPI").style.opacity = 1;
   document.getElementById("rightAPI").style.opacity = 1;
-  document.getElementById("leftAPI").style.width = "480px";
-  document.getElementById("rightAPI").style.width = "300px";
+  document.getElementById("leftAPI").style.width = "630px";
+  document.getElementById("rightAPI").style.width = "390px";
   document.getElementById("middleAPI").style.borderRadius = "0px";
 });
 
@@ -59,8 +59,8 @@ document.getElementById("middleAPI").addEventListener("mouseout", () => {
 document.getElementById("middleMastermind").addEventListener("mouseover", () => {
   document.getElementById("leftMastermind").style.opacity = 1;
   document.getElementById("rightMastermind").style.opacity = 1;
-  document.getElementById("leftMastermind").style.width = "480px";
-  document.getElementById("rightMastermind").style.width = "300px";
+  document.getElementById("leftMastermind").style.width = "630px";
+  document.getElementById("rightMastermind").style.width = "390px";
   document.getElementById("middleMastermind").style.borderRadius = "0px";
 });
 
@@ -76,8 +76,8 @@ document.getElementById("middleMastermind").addEventListener("mouseout", () => {
 document.getElementById("middleExtension").addEventListener("mouseover", () => {
   document.getElementById("leftExtension").style.opacity = 1;
   document.getElementById("rightExtension").style.opacity = 1;
-  document.getElementById("leftExtension").style.width = "480px";
-  document.getElementById("rightExtension").style.width = "300px";
+  document.getElementById("leftExtension").style.width = "630px";
+  document.getElementById("rightExtension").style.width = "390px";
   document.getElementById("middleExtension").style.borderRadius = "0px";
 });
 
@@ -92,7 +92,7 @@ document.getElementById("middleExtension").addEventListener("mouseout", () => {
 
 
 //----------------SECTION PROJETS RESPONSIVE
-
+/*
 const mediaQuerySmall = window.matchMedia("(max-width: 750px)") //the view port is at max 750 pixels wide
 console.log(mediaQuerySmall.matches) //affiche TRUE lorsque la fenêtre faig 800px max
 
@@ -138,7 +138,7 @@ function responsive(){
     });
 }
 responsive()
-
+*/
 
 
 

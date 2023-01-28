@@ -307,7 +307,7 @@ nav a:hover{
     flex-direction: row;
     justify-content: center;
     margin: 30px;
-    height: 300px;  
+    height: 400px;  
 }
 
 .left, .right{
@@ -325,14 +325,15 @@ nav a:hover{
 }
 
 .middle{
-    width: 300px;
-    padding: 0 50px 0 50px;
+    width: 400px;
+    padding: 0 30px 0 30px;
     color: white;
     background-color:#102542;
     display: flex;
     align-items: center;
     z-index: 2;
     border-radius: 20px;
+    justify-content: center;
 }
 
 .middle:hover{
