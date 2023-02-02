@@ -19,20 +19,27 @@ body
 
 .parallax1{
     background: url("../img/fleurs/pexels-secret-garden-931177-horizontal.jpg");
+    height: 100vh; /* Prendra 100% de la hauteur du viewport, et donc de l'écran */
 }
 
-.parallax2{
-    background: url("../img/fleurs/pexels-secret-garden-931177-horizontal-30.png");
+/* .parallax2{
+    background: url("../img/fleurs/pexels-angello-4019143.jpg");
 }
+
+.parallax3{
+    background: url("../img/fleurs/pexels-magda-ehlers-985266.jpg");
+}
+
+.parallax4{
+    background: url("../img/fleurs/pexels-pixabay-68507.jpg");
+} */
 
 .parallax {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    height: 100vh; /* Prendra 100% de la hauteur du viewport, et donc de l'écran */
 }
-
 
 /* BANDEAU NAVIGATION */
 
@@ -88,7 +95,7 @@ nav a
     text-decoration: none;
     margin-left: 20px;
     font-size: 14px;
-    font-family: 'Bebas Neue', cursive;;
+    font-family: 'Bebas Neue', cursive;
 }
 
 nav a:hover{
@@ -224,12 +231,12 @@ nav a:hover{
     /* font-family: 'Arvo', serif; */
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 10px;
-    font-size: 50px;
+    font-size: 70px;
     text-transform: uppercase;
     padding-left: 30px;
     margin: 0 0 40px 0;
 
-    background: linear-gradient(transparent 50%, #F7E579 50%, #F7E579 85%, transparent 75%, transparent 100%);
+    background: linear-gradient(transparent 50%, #f3c4c0 50%, #f3c4c0 85%, transparent 75%, transparent 100%);
       background-repeat: no-repeat;
       background-size: 0% 50%;
       animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
@@ -246,7 +253,7 @@ nav a:hover{
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 3px;
     text-transform: uppercase;
-    font-size: 36px;
+    font-size: 35px;
     text-align: center;
     margin: 0;
     padding: 10px 0 10px 0;
@@ -274,7 +281,6 @@ nav a:hover{
 .date
 {
     font-size: 14px;
-    color: rgb(85, 85, 85);
     font-style: italic;
     margin: 0;
     padding-top: 10px;
@@ -291,8 +297,18 @@ nav a:hover{
 
 .section-projets, .section-pro, .section-education
 {
-    margin: 5% 0 5% 0; /*bottom*/
+    padding: 5% 0 5% 0; /*bottom*/
 }
+
+/* .section-projets{
+    background-color: #f3c4c0;
+}
+.section-pro{
+    background-color: #feddca;
+}
+.section-education{
+    background-color: #fee3d4;
+} */
 
 /* .section-pro, .section-education
 {
@@ -338,7 +354,7 @@ nav a:hover{
 
 .middle:hover{
     color: #102542;
-    background-color:#F7E579;
+    background-color:#f9e1df;
 }
 
 .middle .content{
@@ -349,6 +365,22 @@ nav a:hover{
 
 .projects img{
     height: 100%;
+}
+
+.projectButton{
+    background-color: #f9e1df;
+    color: #E0475B;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    padding: 8px;
+    align-self: center;
+    margin-top: 25px;
+    border: none;
+    box-shadow: 2px 2px #E0475B;
+    cursor: pointer;
 }
 
 
@@ -397,18 +429,18 @@ nav a:hover{
     -webkit-animation: giro 2.5s 1;
     animation: giro 2.5s 1;
 }
-        .formations .card {
-            height: 200px;
+.formations .card {
+    height: 300px;
+}
+
+.experiencesPro .card {
+    height: 400px;
         }
         
-        .experiencesPro .card {
-            height: 400px;
-        }
-
-.card .front,
-.card .back {
-    position: absolute;
-    backface-visibility: hidden;
+        .card .front,
+        .card .back {
+            position: absolute;
+            backface-visibility: hidden;
     box-sizing: border-box;
     /* display: block; */
     height: 100%;
@@ -416,17 +448,18 @@ nav a:hover{
     padding: 30px;
     text-align: center;
     border-radius: 20px;
- }
-  
+}
+
         .card .front{
-            color: #102542;
+            background-color: #102542;
+            color: WHITE;
             background-size: cover;
-            box-shadow: 4px 4px #102542;
+            box-shadow: 4px 4px #f3c4c0;
             display: flex;
             flex-direction: column;
             justify-content: center;  
         }
-                .card #hed{
+                /* .card #hed{
                     background-image : url("../img/fleurs/AdobeStock_209206510-50.png");
                 }
                 .card #hatier{
@@ -434,19 +467,38 @@ nav a:hover{
                 }
                 .card #robert{
                     background-image : url("../img/fleurs/AdobeStock_381443377-50.png");
+                } */
+                /* .card #ada{
+                    background-image : url("../img/fleurs/fleurs_carre/fleur1.png");
                 }
-                .card .formation{
-                    background-color: #F7E579;
+                .card #esce{
+                    background-image : url("../img/fleurs/fleurs_carre/fleur2.png");
                 }
+                .card #abilways{
+                    background-image : url("../img/fleurs/fleurs_carre/fleur3.png");
+                }
+                .card #openclassroom{
+                    background-image : url("../img/fleurs/fleurs_carre/fleur4.png");
+                }
+                .card #pyramid{
+                    background-image : url("../img/fleurs/fleurs_carre/fleur5.png");
+                } */
         
         .card .back{
             transform: rotateY( 180deg);
-            color: white;
-            background-color: #102542;
-            box-shadow: 3px 3px #F7E579;
+            color: #102542;
+            /* background-color: #f9e1df; */
+            background: url("../img/fleurs/AdobeStock_209206510-25.png");
+            box-shadow: 3px 3px #102542;
             display: flex;
             flex-direction: column;
             justify-content: center;  
+        }
+        .card .back .formations{
+            background-position: bottom;
+        }
+        .card .back .experiencesPro{
+            background-position: center;
         }
   
 @-webkit-keyframes giro {
@@ -498,6 +550,15 @@ footer
 
 
 
+
+/*ne s'exécute que quand la largeur d'écran est <= 700px*/
+
+@media screen and (max-width:1100px)
+{
+    .page-content h2{
+        font-size: 50px !important;
+    }
+}
 
 
 /*ne s'exécute que quand la largeur d'écran est <= 700px*/

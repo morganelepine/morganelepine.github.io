@@ -28,6 +28,8 @@ document.getElementById("middlePico").addEventListener("mouseover", () => {
   document.getElementById("leftPico").style.width = "400px";
   document.getElementById("rightPico").style.width = "400px";
   document.getElementById("middlePico").style.borderRadius = "0px";
+  document.getElementById("projectButtonPico").style.backgroundColor = "#102542";
+  document.getElementById("projectButtonPico").style.color = "white";
 });
 
 document.getElementById("middlePico").addEventListener("mouseout", () => {
@@ -36,6 +38,8 @@ document.getElementById("middlePico").addEventListener("mouseout", () => {
   document.getElementById("leftPico").style.width = "0px";
   document.getElementById("rightPico").style.width = "0px";
   document.getElementById("middlePico").style.borderRadius = "20px";
+  document.getElementById("projectButtonPico").style.backgroundColor = "#f9e1df";
+  document.getElementById("projectButtonPico").style.color = "#E0475B";
 });
 
 //-----API
@@ -45,6 +49,8 @@ document.getElementById("middleAPI").addEventListener("mouseover", () => {
   document.getElementById("leftAPI").style.width = "630px";
   document.getElementById("rightAPI").style.width = "390px";
   document.getElementById("middleAPI").style.borderRadius = "0px";
+  document.getElementById("projectButtonAPI").style.backgroundColor = "#102542";
+  document.getElementById("projectButtonAPI").style.color = "white";
 });
 
 document.getElementById("middleAPI").addEventListener("mouseout", () => {
@@ -53,6 +59,8 @@ document.getElementById("middleAPI").addEventListener("mouseout", () => {
   document.getElementById("leftAPI").style.width = "0px";
   document.getElementById("rightAPI").style.width = "0px";
   document.getElementById("middleAPI").style.borderRadius = "20px";
+  document.getElementById("projectButtonAPI").style.backgroundColor = "#f9e1df";
+  document.getElementById("projectButtonAPI").style.color = "#E0475B";
 });
 
 //-----MASTERMIND
@@ -62,6 +70,8 @@ document.getElementById("middleMastermind").addEventListener("mouseover", () => 
   document.getElementById("leftMastermind").style.width = "630px";
   document.getElementById("rightMastermind").style.width = "390px";
   document.getElementById("middleMastermind").style.borderRadius = "0px";
+  document.getElementById("projectButtonMastermind").style.backgroundColor = "#102542";
+  document.getElementById("projectButtonMastermind").style.color = "white";
 });
 
 document.getElementById("middleMastermind").addEventListener("mouseout", () => {
@@ -70,6 +80,8 @@ document.getElementById("middleMastermind").addEventListener("mouseout", () => {
   document.getElementById("leftMastermind").style.width = "0px";
   document.getElementById("rightMastermind").style.width = "0px";
   document.getElementById("middleMastermind").style.borderRadius = "20px";
+  document.getElementById("projectButtonMastermind").style.backgroundColor = "#f9e1df";
+  document.getElementById("projectButtonMastermind").style.color = "#E0475B";
 });
 
 //-----EXTENSION
@@ -79,6 +91,8 @@ document.getElementById("middleExtension").addEventListener("mouseover", () => {
   document.getElementById("leftExtension").style.width = "630px";
   document.getElementById("rightExtension").style.width = "390px";
   document.getElementById("middleExtension").style.borderRadius = "0px";
+  document.getElementById("projectButtonExtension").style.backgroundColor = "#102542";
+  document.getElementById("projectButtonExtension").style.color = "white";
 });
 
 document.getElementById("middleExtension").addEventListener("mouseout", () => {
@@ -87,6 +101,8 @@ document.getElementById("middleExtension").addEventListener("mouseout", () => {
   document.getElementById("leftExtension").style.width = "0px";
   document.getElementById("rightExtension").style.width = "0px";
   document.getElementById("middleExtension").style.borderRadius = "20px";
+  document.getElementById("projectButtonExtension").style.backgroundColor = "#f9e1df";
+  document.getElementById("projectButtonExtension").style.color = "#E0475B";
 });
 
 
