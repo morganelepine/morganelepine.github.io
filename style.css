@@ -15,6 +15,98 @@ body
 }
 
 
+
+/*PROJETS ESSAIS*/
+
+.PROJETS{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 0 2%;
+}
+
+.descriptionProjet {
+    width: 400px;
+    display: flex;
+    align-content: center;
+}
+
+.texteProjet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.PROJETS .front{
+    background-position: center;
+}
+
+#extensionProjet{
+    background-image : url("../img/extension2.png");
+}
+#codeExtensionProjet{
+    background-image : url("../img/code_extension.png");
+}
+
+#mastermindProjet{
+    background-image : url("../img/mastermind2.png");
+}
+#codeMastermindProjet{
+    background-image : url("../img/code_mastermind.png");
+}
+
+#datavizProjet{
+    background-image : url("../img/dataviz3.png");
+}
+#codeDatavizProjet{
+    background-image : url("../img/code_dataviz.png");
+}
+
+#pico8Projet{
+    background-image : url("../img/pico8.png");
+}
+#codePico8Projet{
+    background-image : url("../img/code_pico8.png");
+}
+
+.imageProjet {
+    width: 700px;
+    margin: 2%;
+    perspective: 1200px;
+    transition: all 0.3s ease 0s;
+}
+        
+.imageProjet .card {
+    height: 450px;
+    margin: 20px 0;
+}
+
+.imageProjet:hover .card {
+    transform: rotateY( 180deg);
+}
+
+.boutonProjet{
+    background-color: #102542;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 8px 15px 12px 15px;
+    border: none;
+    box-shadow: 2px 2px #E0475B;
+    cursor: pointer;
+    text-decoration: none;
+    align-self: center;
+}
+
+.langage{
+    color: #E0475B;
+    font-weight: bold;
+}
+
+
+
 /* PARALLAX EFFECT */
 
 .parallax1{
@@ -226,9 +318,9 @@ nav a:hover{
 
 /* CONTENU DE LA PAGE */
 
+/*
 .page-content h2
 {
-    /* font-family: 'Arvo', serif; */
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 10px;
     font-size: 70px;
@@ -247,6 +339,37 @@ nav a:hover{
         background-size: 100% 100%;
     }
 }
+*/
+
+.page-content h2
+{
+    font-size: 55px;
+    text-transform: uppercase;
+    margin: 0 0 70px 0;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.title {
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    font-weight: 300;
+    color: #102542;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.title span{
+	z-index: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -60px;
+	text-align: center;
+	opacity: 0.07;
+    letter-spacing: 20px;
+	font-size: 150px;
+	font-weight: 700;
+}
 
 .page-content h3
 {
@@ -256,7 +379,6 @@ nav a:hover{
     font-size: 35px;
     text-align: center;
     margin: 0;
-    padding: 10px 0 10px 0;
 }
 
 .page-content h4
@@ -297,7 +419,7 @@ nav a:hover{
 
 .section-projets, .section-pro, .section-education
 {
-    padding: 5% 0 5% 0; /*bottom*/
+    padding: 7% 0;
 }
 
 /* .section-projets{
@@ -441,14 +563,14 @@ nav a:hover{
         .card .back {
             position: absolute;
             backface-visibility: hidden;
-    box-sizing: border-box;
-    /* display: block; */
-    height: 100%;
-    width: 100%;
-    padding: 30px;
-    text-align: center;
-    border-radius: 20px;
-}
+        box-sizing: border-box;
+        /* display: block; */
+        height: 100%;
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+        border-radius: 20px;
+    }
 
         .card .front{
             background-color: #102542;
@@ -551,6 +673,7 @@ footer
 
 
 
+
 /*ne s'exécute que quand la largeur d'écran est <= 700px*/
 
 @media screen and (max-width:1100px)
@@ -625,5 +748,10 @@ footer
     footer .colonne{
         max-width: 80%;
     }
-
+    .PROJETS{
+        margin: 7% 0 0 0;
+    }
+    .section-projets, .section-pro, .section-education{
+        margin: 10% 1%;
+    }
 }
