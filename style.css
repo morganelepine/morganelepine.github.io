@@ -44,6 +44,13 @@ body
     background-position: center;
 }
 
+#RSrecettes{
+    background-image : url("../img/rs_recettes2.png");
+}
+#codeRSrecettes{
+    background-image : url("../img/code_rs_recettes.png");
+}
+
 #extensionProjet{
     background-image : url("../img/extension2.png");
 }
