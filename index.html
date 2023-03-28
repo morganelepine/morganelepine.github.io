@@ -11,25 +11,12 @@
 </head>
 
 <body>
-    <!--MENU HAUT DE PAGE-->
-<!--     <nav id="nav">
-        <div class="profile">
-            <img src="img/profile.jpg" id="photo" alt="Photo de profil">
-            <h1>Morgane LU</h1>
-        </div>
-        <ul>
-            <li><a href="">À propos de moi</a></li>
-            <li><a href="#projets">Projets réalisés</a></li>
-            <li><a href="#pro">Curriculum vitæ</a></li>
-            <li><a href="#footer">Contact</a></li>
-        </ul>
-    </nav> -->
 
     <!-- HEADER -->
 
-    <section id="header" class="parallax parallax1">
+    <section id="header" class="parallax">
 
-        <!--MENU AU SCROLL-->
+        <!--MENU-->
         <div id="menuScroll">
             <div class="navScroll">
                 <input type="checkbox">
@@ -60,7 +47,7 @@
     <section class="page-content">
 
         <!-- PROJETS -->
-        <section class="section-projets one parallax parallax2" data-color="#F8EFEA" id="projets">
+        <section class="section-projets one" data-color="#F8EFEA" id="projets">
 
             <h2 class="title">Projets <span>Projets</span></h2>
 
@@ -68,12 +55,63 @@
 
                 <div class="descriptionProjet" data-aos="fade-up">
                     <div class="texteProjet">
+                        <div>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/wutqoutb.json"
+                                trigger="loop"
+                                colors="primary:#102542,secondary:#E0475B"
+                                style="width:60px;height:60px">
+                            </lord-icon>
+                        </div>
+                        <h3>Site e-commerce</h3>
+                        <p class="description">Développement d'une plateforme de gestion d'un fleuriste.</p>
+                        <p class="langage">React | MongoDB | Express | Node | Tailwind</p>
+                        <a href='https://github.com/morganelepine/Wonderflower'
+                        class="boutonProjet"
+                        target="_blank">
+                        ➔ Repo Github
+                        </a>
+                    </div>
+                </div>
+
+                <div class="imageProjet" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <div class="front" id="Wonderflower"></div>
+                        <div class="back" id="codeWonderflower"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="PROJETS">
+
+                <div class="descriptionProjet" data-aos="fade-up">
+                    <div class="texteProjet">
+                        <div>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/kdruzgxz.json"
+                                trigger="loop"
+                                colors="primary:#102542,secondary:#E0475B"
+                                style="width:60px;height:60px">
+                            </lord-icon>
+                        </div>
                         <h3>Réseau social</h3>
                         <p class="description">Création d'un réseau social pour partager, liker, commenter des recettes de cocktails.</p>
                         <p class="langage">PHP | MySQL | Bootstrap</p>
                         <a href='https://recettes-cocktails.herokuapp.com/'
-                            class="boutonProjet"
-                            target="_blank">➔ Découvrir le projet</a>
+                        class="boutonProjet"
+                        target="_blank">
+                        ➔ Découvrir le projet
+                        </a>
+                        <div class="github">
+                            <img src="./img/github.png" alt="Logo Github" class="githubLogo">
+                            <a
+                                href='https://github.com/morganelepine/Recettes-PHP-MySQL-Bootstrap'
+                                class="githubRepo"
+                                target="_blank">
+                                Repo Github
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -90,12 +128,19 @@
 
                 <div class="descriptionProjet" data-aos="fade-up">
                     <div class="texteProjet">
+                        <div>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/gaqzgxto.json"
+                                trigger="loop"
+                                colors="primary:#102542,secondary:#E0475B"
+                                style="width:60px;height:60px">
+                            </lord-icon>                        </div>
                         <h3>Extension de navigateur</h3>
                         <p class="description">Création d'une page d'accueil regroupant des modules liés à l'environnement.</p>
                         <p class="langage">JavaScript | HTML | CSS</p>
                         <a href='https://github.com/morganelepine/Extension_navigateur'
                             class="boutonProjet"
-                            target="_blank">➔ Découvrir le projet</a>
+                            target="_blank">➔ Repo Github</a>
                     </div>
                 </div>
 
@@ -112,12 +157,29 @@
 
                 <div class="descriptionProjet" data-aos="fade-up">
                     <div class="texteProjet">
+                        <div>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/rwotyanb.json"
+                                trigger="hover"
+                                colors="primary:#102542,secondary:#E0475B"
+                                style="width:60px;height:60px">
+                            </lord-icon>
+                        </div>
                         <h3>Mastermind</h3>
                         <p class="description">Développement d'un jeu Mastermind responsive.</p>
                         <p class="langage">JavaScript | HTML | CSS</p>
                         <a href='https://guileless-pithivier-1e0a9a.netlify.app/'
                             class="boutonProjet"
                             target="_blank">➔ Découvrir le projet</a>
+                        <div class="github">
+                            <img src="./img/github.png" alt="Logo Github" class="githubLogo">
+                            <a
+                                href='https://github.com/morganelepine/Mastermind'
+                                class="githubRepo"
+                                target="_blank">
+                                Repo Github
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -134,12 +196,29 @@
 
                 <div class="descriptionProjet" data-aos="fade-up">
                     <div class="texteProjet">
+                        <div>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/etwtznjn.json"
+                                trigger="loop"
+                                colors="primary:#102542,secondary:#E0475B"
+                                style="width:60px;height:60px">
+                            </lord-icon>
+                        </div>
                         <h3>Dataviz & API</h3>
                         <p class="description">Développement d'un site web permettant de visualiser des données de façon dynamique.</p>
                         <p class="langage">JavaScript | HTML | CSS</p>
                         <a href='https://storied-kangaroo-83f733.netlify.app/'
                             class="boutonProjet"
                             target="_blank">➔ Découvrir le projet</a>
+                        <div class="github">
+                            <img src="./img/github.png" alt="Logo Github" class="githubLogo">
+                            <a
+                                href='https://github.com/morganelepine/AsteAstro-Dataviz-API'
+                                class="githubRepo"
+                                target="_blank">
+                                Repo Github
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -156,12 +235,20 @@
 
                 <div class="descriptionProjet" data-aos="fade-up">
                     <div class="texteProjet">
+                        <div>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ofbvmdiz.json"
+                                trigger="loop"
+                                colors="primary:#102542,secondary:#E0475B"
+                                style="width:60px;height:60px">
+                            </lord-icon>                        </div>
                         <h3>Jeu Pico-8</h3>
                         <p class="description">Développement d'un jeu vidéo miniature sur la console imaginaire Pico-8. </p>
                         <p class="langage">Lua</p>
                         <a href='https://www.lexaloffle.com/bbs/?tid=50036'
                             class="boutonProjet"
                             target="_blank">➔ Découvrir le projet</a>
+                            
                     </div>
                 </div>
 
@@ -178,12 +265,23 @@
 
                 <div class="descriptionProjet" data-aos="fade-up">
                     <div class="texteProjet">
+                        <div>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/nkmsrxys.json"
+                                trigger="loop"
+                                colors="primary:#102542,secondary:#E0475B"
+                                style="width:60px;height:60px">
+                            </lord-icon>
+                        </div>
                         <h3>Liste de cadeaux</h3>
                         <p class="description">Plateforme de création de listes de cadeaux avec espace administrateur·ice pour consulter les listes, être informé·e des cadeaux pris... </p>
                         <p class="langage">React | MongoDB | Express | Node | Tailwind</p>
                         <a href='https://github.com/morganelepine/Todo-MERN-Tailwind'
                             class="boutonProjet"
-                            target="_blank">Projet en cours</a>
+                            target="_blank">
+                            ➔ Repo Github
+                        </a>
+                        <p class="githubRepo">Projet en cours</p>
                     </div>
                 </div>
 
@@ -200,7 +298,7 @@
 
         
         <!-- EXPERIENCES PRO -->
-        <section class="section-pro two parallax parallax3" data-color="#fff" color="white" id="pro">
+        <section class="section-pro two" data-color="#fff" color="white" id="pro">
 
             <h2 class="title">Expériences<span>Expériences</span></h2>
 
@@ -276,7 +374,7 @@
 
 
         <!-- FORMATIONS -->
-        <section class="section-education three parallax parallax4" data-color="#F8EFEA" id="education">
+        <section class="section-education three" data-color="#F8EFEA" id="education">
             
             <h2 class="title">Formations<span>Formations</span></h2>
             
@@ -349,21 +447,24 @@
 
     <!-- FOOTER -->
     <footer id="footer">
-        <div class="colonne">
-            <h4>Me contacter</h4>
-                <p>Formulaire à venir</p>
+        <div>
+            <a href="mailto:m.lepineutter@gmail.com" target="_blank">Me contacter par mail</a>
         </div>
-        <div class="colonne">
-            <h4>Me suivre</h4>
-                <a href="https://www.linkedin.com/in/morgane-l%C3%A9pine-utter-a7bb5353/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/morganelepine/" target="_blank">GitHub</a>
+        <div>
+            <a href="https://www.linkedin.com/in/morgane-l%C3%A9pine-utter-a7bb5353/" target="_blank">Me suivre sur LinkedIn</a>
+        </div>
+        <div>
+            <a href="https://github.com/morganelepine/" target="_blank">Découvrir mon GitHub</a>
+        </div>
+        <div>
+            <a href="./img/CV_web_MLU.pdf" download target="_blank">Télécharger mon CV</a>
         </div>
     </footer>
     
 
-    <!-- JAVASCRIPT -->
+    <!-- SCRIPTS -->
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
     <script src="script.js" type="module"></script>
-    <!-- <script src="/node_modules/jquery/dist/jquery.js"></script> -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>

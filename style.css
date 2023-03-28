@@ -16,212 +16,6 @@ body
 }
 
 
-
-/*PROJETS ESSAIS*/
-
-.PROJETS{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-content: center;
-    margin: 0 2%;
-}
-
-.descriptionProjet {
-    width: 400px;
-    display: flex;
-    align-content: center;
-}
-
-.texteProjet{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-.PROJETS .front{
-    background-position: center;
-}
-
-#RSrecettes{
-    background-image : url("../img/rs_recettes3.png");
-}
-#codeRSrecettes{
-    background-image : url("../img/code_rs_recettes.png");
-}
-
-#extensionProjet{
-    background-image : url("../img/extension2.png");
-}
-#codeExtensionProjet{
-    background-image : url("../img/code_extension.png");
-}
-
-#mastermindProjet{
-    background-image : url("../img/mastermind2.png");
-}
-#codeMastermindProjet{
-    background-image : url("../img/code_mastermind.png");
-}
-
-#datavizProjet{
-    background-image : url("../img/dataviz3.png");
-}
-#codeDatavizProjet{
-    background-image : url("../img/code_dataviz.png");
-}
-
-#pico8Projet{
-    background-image : url("../img/pico8.png");
-}
-#codePico8Projet{
-    background-image : url("../img/code_pico8.png");
-}
-
-#reactProjet{
-    background-image : url("../img/todo-react.png");
-}
-#codeReactProjet{
-    background-image : url("../img/code_todo-react.png");
-}
-
-.imageProjet {
-    width: 700px;
-    margin: 2%;
-    perspective: 1200px;
-    transition: all 0.3s ease 0s;
-}
-        
-.imageProjet .card {
-    height: 450px;
-    margin: 20px 0;
-}
-
-.imageProjet:hover .card {
-    transform: rotateY( 180deg);
-}
-
-.boutonProjet{
-    background-color: #102542;
-    color: white;
-    font-size: 16px;
-    border-radius: 10px;
-    padding: 8px 15px 12px 15px;
-    border: none;
-    box-shadow: 2px 2px #E0475B;
-    cursor: pointer;
-    text-decoration: none;
-    align-self: center;
-}
-
-.boutonProjetEnCours{
-    background-color: #E0475B;
-    color: white;
-    font-size: 16px;
-    border-radius: 10px;
-    padding: 8px 15px 12px 15px;
-    border: none;
-    box-shadow: 2px 2px #102542 ;
-    text-decoration: none;
-    align-self: center;
-}
-
-.langage{
-    color: #E0475B;
-    font-weight: bold;
-}
-
-
-
-/* PARALLAX EFFECT */
-
-.parallax1{
-    background: url("../img/fleurs/pexels-secret-garden-931177-horizontal.jpg");
-    height: 100vh; /* Prendra 100% de la hauteur du viewport, et donc de l'écran */
-}
-
-/* .parallax2{
-    background: url("../img/fleurs/pexels-angello-4019143.jpg");
-}
-
-.parallax3{
-    background: url("../img/fleurs/pexels-magda-ehlers-985266.jpg");
-}
-
-.parallax4{
-    background: url("../img/fleurs/pexels-pixabay-68507.jpg");
-} */
-
-.parallax {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-}
-
-/* BANDEAU NAVIGATION */
-
-/*Menu V1*/
-
-nav
-{
-    padding: 0.5%;
-    display: flex; /*on dit qu'on va utiliser les flexbox*/
-    flex-direction: row;
-    flex-wrap: wrap; /*passer à la ligne lorsque les éléments ne rentrent pas*/
-    justify-content: space-between;
-    align-items: center;
-    position: sticky; /*reste au dessus de la page*/
-    top:0; /*en haut de l'écran*/
-    background-color: #F8EFEA;
-}
-
-nav .profile
-{
-    display: flex;
-    align-items: center;
-}
-
-nav .profile img
-{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-}
-
-nav h1
-{
-    margin-left: 10px;
-    font-size: 50px;
-}
-
-nav ul
-{
-    display: flex;
-    list-style-type: none; /*enlève les puces*/
-}
-
-nav a
-{
-    margin-left: 20px;
-    cursor: pointer;
-    background-color: #E0475B;
-    box-shadow: 3px 3px #102542;
-    border-radius: 20px;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-}
-
-nav a:hover{
-    background-color: #102542;
-    box-shadow: 3px 3px #E0475B;
-}
-
 /*Menu au scroll*/
 
 #menuScroll, .navScroll, .menu {
@@ -304,6 +98,15 @@ nav a:hover{
 
 /* HEADER */
 
+.parallax{
+    background: url("../img/pexels-secret-garden-931177-horizontal.png");
+    height: 100vh; /* Prendra 100% de la hauteur du viewport, et donc de l'écran */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
 #header
 {
     display: flex;
@@ -338,43 +141,12 @@ nav a:hover{
     color: 102542;
     text-shadow: 3px 3px white;
     letter-spacing: 6px;
-    font-family: 'Bebas Neue', cursive;;
+    font-family: 'Bebas Neue', cursive;
     font-size: 50px;
 }
 
 
 /* CONTENU DE LA PAGE */
-
-/*
-.page-content h2
-{
-    font-family: 'Bebas Neue', cursive;
-    letter-spacing: 10px;
-    font-size: 70px;
-    text-transform: uppercase;
-    padding-left: 30px;
-    margin: 0 0 40px 0;
-
-    background: linear-gradient(transparent 50%, #f3c4c0 50%, #f3c4c0 85%, transparent 75%, transparent 100%);
-      background-repeat: no-repeat;
-      background-size: 0% 50%;
-      animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
-}
-
-@keyframes animatedBackground {
-    to {
-        background-size: 100% 100%;
-    }
-}
-*/
-
-.page-content h2
-{
-    font-size: 55px;
-    text-transform: uppercase;
-    margin: 0 0 70px 0;
-    font-family: 'Poppins', sans-serif;
-}
 
 .title {
     position: relative;
@@ -397,13 +169,20 @@ nav a:hover{
 	font-weight: 700;
 }
 
+.page-content h2
+{
+    font-size: 55px;
+    text-transform: uppercase;
+    margin: 0 0 70px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
 .page-content h3
 {
     text-transform: uppercase;
     font-size: 30px;
     text-align: center;
     margin: 0;
-    padding-top: 20px;
 }
 
 .page-content h4
@@ -447,89 +226,149 @@ nav a:hover{
     padding: 7% 0;
 }
 
-/* .section-projets{
-    background-color: #f3c4c0;
-}
-.section-pro{
-    background-color: #feddca;
-}
-.section-education{
-    background-color: #fee3d4;
-} */
-
-/* .section-pro, .section-education
-{
-    height:100vh;
-} */
-
 
 /* CONTENU DE LA PAGE : projets */
 
-.projects{
+.PROJETS{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 30px;
-    height: 400px;  
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 0 2%;
 }
 
-.left, .right{
-    opacity: 0;
-    width: 0px;
-    transition: 0.3s ease-in-out all;
-}
-
-.left img{
-    border-radius: 20px 0 0 20px;
-}
-
-.right img{
-    border-radius: 0 20px 20px 0;
-}
-
-.middle{
+.descriptionProjet {
     width: 400px;
-    padding: 0 30px 0 30px;
-    color: white;
-    background-color:#102542;
     display: flex;
-    align-items: center;
-    z-index: 2;
-    border-radius: 20px;
-    justify-content: center;
+    align-content: center;
 }
 
-.middle:hover{
-    color: #102542;
-    background-color:#f9e1df;
-}
-
-.middle .content{
+.texteProjet{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
 }
 
-.projects img{
-    height: 100%;
+.PROJETS .front{
+    background-position: center;
 }
 
-.projectButton{
-    background-color: #f9e1df;
-    color: #E0475B;
-    font-family: 'Bebas Neue', cursive;
-    font-weight: bold;
-    font-size: 16px;
-    letter-spacing: 2px;
+#Wonderflower{
+    background-image : url("../img/wonderflower_home.png");
+}
+#codeWonderflower{
+    background-image : url("../img/code_wonderflower");
+}
+
+#RSrecettes{
+    background-image : url("../img/rs_recettes3.png");
+}
+#codeRSrecettes{
+    background-image : url("../img/code_rs_recettes.png");
+}
+
+#extensionProjet{
+    background-image : url("../img/extension2.png");
+}
+#codeExtensionProjet{
+    background-image : url("../img/code_extension.png");
+}
+
+#mastermindProjet{
+    background-image : url("../img/mastermind2.png");
+}
+#codeMastermindProjet{
+    background-image : url("../img/code_mastermind.png");
+}
+
+#datavizProjet{
+    background-image : url("../img/dataviz3.png");
+}
+#codeDatavizProjet{
+    background-image : url("../img/code_dataviz.png");
+}
+
+#pico8Projet{
+    background-image : url("../img/pico8.png");
+}
+#codePico8Projet{
+    background-image : url("../img/code_pico8.png");
+}
+
+#reactProjet{
+    background-image : url("../img/todo-react.png");
+}
+#codeReactProjet{
+    background-image : url("../img/code_todo-react.png");
+}
+
+.imageProjet {
+    width: 700px;
+    margin: 2%;
+    perspective: 1200px;
+    transition: all 0.3s ease 0s;
+}
+        
+.imageProjet .card {
+    height: 450px;
+    margin: 20px 0;
+}
+
+.imageProjet:hover .card {
+    transform: rotateY( 180deg);
+}
+
+.boutonProjet{
+    background-color: #102542;
+    color: white;
+    font-size: 15px;
     border-radius: 10px;
-    padding: 8px;
-    align-self: center;
-    margin-top: 25px;
+    padding: 8px 15px;
     border: none;
     box-shadow: 2px 2px #E0475B;
     cursor: pointer;
+    text-decoration: none;
+    align-self: center;
+    transition: all 0.4s ease;
+    Flex: 0 0 auto;
+    width: 170px;
 }
 
+.boutonProjet:hover {
+    font-size: 16px;
+    color: white;
+    background: #E0475B;
+    box-shadow: 3px 3px #102542;
+    width: 175px;
+}
+
+.langage{
+    color: #E0475B;
+    font-weight: bold;
+}
+
+.github{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.githubRepo{
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: none;
+    color: #102542;
+}
+
+.githubRepo:hover{
+    color: #E0475B;
+}
+
+.githubLogo{
+    height: 20px;
+    margin-right: 5px;
+}
 
 
 /* CONTENU DE LA PAGE : expériences pro */
@@ -619,35 +458,10 @@ nav a:hover{
             flex-direction: column;
             justify-content: center;  
         }
-                /* .card #hed{
-                    background-image : url("../img/fleurs/AdobeStock_209206510-50.png");
-                }
-                .card #hatier{
-                    background-image : url("../img/fleurs/pexels-angello-4019143-50.png");
-                }
-                .card #robert{
-                    background-image : url("../img/fleurs/AdobeStock_381443377-50.png");
-                } */
-                /* .card #ada{
-                    background-image : url("../img/fleurs/fleurs_carre/fleur1.png");
-                }
-                .card #esce{
-                    background-image : url("../img/fleurs/fleurs_carre/fleur2.png");
-                }
-                .card #abilways{
-                    background-image : url("../img/fleurs/fleurs_carre/fleur3.png");
-                }
-                .card #openclassroom{
-                    background-image : url("../img/fleurs/fleurs_carre/fleur4.png");
-                }
-                .card #pyramid{
-                    background-image : url("../img/fleurs/fleurs_carre/fleur5.png");
-                } */
         
         .card .back{
             transform: rotateY( 180deg);
             color: #102542;
-            /* background-color: #f9e1df; */
             background: url("../img/fleurs/AdobeStock_209206510-25.png");
             box-shadow: 3px 3px #102542;
             display: flex;
@@ -688,24 +502,42 @@ footer
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #102542;
     color: white;
-    padding: 10px;
     text-align: center;
+    padding: 40px 0 10px 0;
+    background: url("../img/pexels-secret-garden-931177-horizontal.png");
+    background-position: bottom;
+    background-size: cover;
 }
 
-#footer p, #footer a
+#footer div {
+    width: 300px;
+    height: 70px;
+}
+
+#footer a
 {
-    font-size: 12px;
-    cursor: pointer;
-    background-color: #E0475B;
-    /*box-shadow: 3px 3px white;*/
-    border-radius: 20px;
-    padding: 10px;
-    color: white;
+    font-size: 15px;
+    font-weight: 500;
     text-decoration: none;
+    color: #102542;
+    background-color: #ffe8e6;
+    box-shadow: 3px 3px #102542;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 200px;
+    padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    transition: all 0.4s ease;
+}
+
+#footer a:hover {
+    font-size: 16px;
+    color: white;
+    background: #E0475B;
+    box-shadow: 3px 3px #102542;
+    width: 210px;
 }
 
 
@@ -786,7 +618,6 @@ footer
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-bottom: 30px;
     }
     footer .colonne{
         max-width: 80%;
