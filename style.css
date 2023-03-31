@@ -258,7 +258,7 @@ body
     background-image : url("../img/wonderflower_home.png");
 }
 #codeWonderflower{
-    background-image : url("../img/code_wonderflower");
+    background-image : url("../img/code_wonderflower.png");
 }
 
 #RSrecettes{
@@ -462,7 +462,7 @@ body
         .card .back{
             transform: rotateY( 180deg);
             color: #102542;
-            background: url("../img/fleurs/AdobeStock_209206510-25.png");
+            background: url("../img/AdobeStock_209206510-25.png");
             box-shadow: 3px 3px #102542;
             display: flex;
             flex-direction: column;
