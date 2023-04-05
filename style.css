@@ -18,7 +18,13 @@ body
 
 /*Menu au scroll*/
 
-#menuScroll, .navScroll, .menu {
+#menuScroll{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+#menuScroll, .navScroll, .menu, ul {
     display: flex;
     align-items: center;
 }
@@ -38,7 +44,7 @@ body
 
 .navScroll input {
     width: 50px;
-    height: 40px;
+    height: 50px;
     cursor: pointer;
     opacity: 0;
 }
@@ -601,6 +607,9 @@ footer
 
 @media screen and (max-width:1100px)
 {
+    #menuScroll{
+        position: relative;
+    }
     .page-content h2{
         font-size: 50px !important;
     }
