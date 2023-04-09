@@ -199,17 +199,6 @@ body
     margin: 0;
 }
 
-.page-content .description
-{
-    font-size: 16px;    
-}
-
-.page-content ul
-{
-    padding: 0;
-    margin-left: 1.2em;
-}
-
 .date
 {
     font-size: 14px;
@@ -454,6 +443,19 @@ body
 
 
 /* CONTENU DE LA PAGE : formations */
+
+.description ul {
+    font-size: 16px;    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin-left: 1.2em;
+}
+
+.description li {
+    text-align: left;
+}
 
 /* CARTES QUI SE RETOURNENT */
 
@@ -701,7 +703,7 @@ footer
         max-width: 80%;
     }
     .PROJETS{
-        margin: 7% 0 0 0;
+        margin: 8% 0 0 0;
     }
     .section-projets, .section-pro, .section-education{
         margin: 10px 3%;
