@@ -1,59 +1,64 @@
 //---------------FILTRE PROJETS
 
 //BOUTON PAR TECHNO
-function filter(button, flex, none1, none2, none3) {
-  document.getElementById(button).addEventListener("click", () => {
-    document.querySelectorAll(flex).forEach((project) => {
-      project.style.display = "flex";
+function filter(button, flex, none1, none2, none3, none4) {
+    document.getElementById(button).addEventListener("click", () => {
+        document.querySelectorAll(flex).forEach((project) => {
+            project.style.display = "flex";
+        });
+        document.querySelectorAll(none1).forEach((project) => {
+            project.style.display = "none";
+        });
+        document.querySelectorAll(none2).forEach((project) => {
+            project.style.display = "none";
+        });
+        document.querySelectorAll(none3).forEach((project) => {
+            project.style.display = "none";
+        });
+        document.querySelectorAll(none4).forEach((project) => {
+            project.style.display = "none";
+        });
+        AOS.init({
+            once: true,
+        });
+        document.getElementById("buttonAll").style.display = "block";
     });
-    document.querySelectorAll(none1).forEach((project) => {
-      project.style.display = "none";
-    });
-    document.querySelectorAll(none2).forEach((project) => {
-      project.style.display = "none";
-    });
-    document.querySelectorAll(none3).forEach((project) => {
-      project.style.display = "none";
-    });
-    AOS.init({
-      once: true,
-    });
-    document.getElementById("buttonAll").style.display = "block";
-  })
 }
 
-filter("buttonJS", ".js", ".mern", ".php", ".lua")
-filter("buttonMern", ".mern", ".js", ".php", ".lua")
-filter("buttonPHP", ".php", ".js", ".mern", ".lua")
-filter("buttonLua", ".lua", ".js", ".mern", ".php")
+filter("buttonJS", ".js", ".mern", ".php", ".mobile", ".lua");
+filter("buttonMern", ".mern", ".js", ".php", ".mobile", ".lua");
+filter("buttonPHP", ".php", ".js", ".mern", ".mobile", ".lua");
+filter("buttonMobile", ".mobile", ".lua", ".js", ".mern", ".php");
+filter("buttonLua", ".lua", ".js", ".mern", ".php", ".mobile");
 
 //BOUTON TOUS LES PROJETS
 document.getElementById("buttonAll").addEventListener("click", displayAll);
 function displayAll() {
-  document.querySelectorAll(".js").forEach((project) => {
-    project.style.display = "flex";
-  });
-  document.querySelectorAll(".mern").forEach((project) => {
-    project.style.display = "flex";
-  });
-  document.querySelectorAll(".php").forEach((project) => {
-    project.style.display = "flex";
-  });
-  document.querySelectorAll(".lua").forEach((project) => {
-    project.style.display = "flex";
-  });
-  AOS.init({
-    once: false,
-  });
-  document.getElementById("buttonAll").style.display = "none";
+    document.querySelectorAll(".js").forEach((project) => {
+        project.style.display = "flex";
+    });
+    document.querySelectorAll(".mern").forEach((project) => {
+        project.style.display = "flex";
+    });
+    document.querySelectorAll(".php").forEach((project) => {
+        project.style.display = "flex";
+    });
+    document.querySelectorAll(".mobile").forEach((project) => {
+        project.style.display = "flex";
+    });
+    document.querySelectorAll(".lua").forEach((project) => {
+        project.style.display = "flex";
+    });
+    AOS.init({
+        once: false,
+    });
+    document.getElementById("buttonAll").style.display = "none";
 }
-
-
 
 //---------------AOS
 
 AOS.init({
-  duration: 1200, // values from 0 to 3000, with step 50ms
+    duration: 1200, // values from 0 to 3000, with step 50ms
 });
 
 /*

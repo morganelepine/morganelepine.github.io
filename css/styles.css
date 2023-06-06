@@ -1,0 +1,702 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap");
+@font-face {
+  font-family: "Happy-Day";
+  src: url("/fonts/Happy-Day.ttf") format(‘truetype’);
+}
+body {
+  /*padding: 2%; 2% de la page*/
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8efea;
+  color: #102542;
+}
+
+/*Menu au scroll*/
+#menuScroll {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+#menuScroll,
+.navScroll,
+.menu,
+ul {
+  display: flex;
+  align-items: center;
+}
+
+.navScroll {
+  position: relative;
+  background-color: #102542;
+  padding: 10px;
+  transition: 0.5s;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.navScroll input:checked ~ .menu {
+  width: auto;
+}
+
+.navScroll input {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.navScroll span {
+  position: absolute;
+  left: 23px;
+  width: 30px;
+  height: 4px;
+  border-radius: 50px;
+  background-color: white;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.navScroll input:checked ~ span {
+  background-color: #e0475b;
+}
+
+.navScroll span:nth-child(2) {
+  transform: translateY(-8px);
+}
+
+.navScroll input:checked ~ span:nth-child(2) {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.navScroll span:nth-child(3) {
+  transform: translateY(8px);
+}
+
+.navScroll input:checked ~ span:nth-child(3) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.menu li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 0.5s; /*pour le hover*/
+}
+
+.menu li a:hover {
+  color: #e0475b;
+}
+
+/* HEADER */
+.parallax {
+  background: url("../img/pexels-secret-garden-931177-horizontal.png");
+  height: 100vh; /* Prendra 100% de la hauteur du viewport, et donc de l'écran */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#titreHeader {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#header h1 {
+  margin: 0;
+  padding: 20px;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 6px 6px #102542;
+  letter-spacing: 6px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 140px;
+}
+
+#header h2 {
+  margin: 0;
+  color: 102542;
+  text-shadow: 3px 3px white;
+  letter-spacing: 6px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 50px;
+}
+
+/* CONTENU DE LA PAGE */
+.title {
+  position: relative;
+  font-weight: 300;
+  color: #102542;
+  letter-spacing: 10px;
+  text-align: center;
+}
+
+.title span {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -57px;
+  text-align: center;
+  opacity: 0.07;
+  letter-spacing: 20px;
+  font-size: 130px;
+  font-weight: 700;
+}
+
+.page-content h2 {
+  font-size: 55px;
+  text-transform: uppercase;
+  margin: 0 0 70px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.page-content h3 {
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+}
+
+.page-content h4 {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.date {
+  font-size: 14px;
+  font-style: italic;
+  margin: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* CONTENU DE LA PAGE : organisation des div */
+.page-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-projets,
+.section-pro,
+.section-education {
+  padding: 7% 0;
+}
+
+/* CONTENU DE LA PAGE : projets */
+.PROJETS {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  margin: 0 2%;
+}
+
+#menuProjets {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 40px;
+}
+
+.boutonMenuProjet {
+  background-color: #102542;
+  box-shadow: 3px 3px #e0475b;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 8px 15px;
+  margin: 10px;
+  cursor: pointer;
+  align-self: center;
+  width: 170px;
+}
+
+.boutonMenuProjet:hover {
+  font-size: 16px;
+  color: white;
+  background: #e0475b;
+  box-shadow: 3px 3px #102542;
+}
+
+#buttonAll {
+  display: none;
+  background-color: #f3c4c0;
+  box-shadow: 3px 3px #102542;
+  border: none;
+  border-radius: 10px;
+  color: #102542;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 8px 15px;
+  margin: 10px;
+  cursor: pointer;
+  align-self: center;
+  width: 170px;
+}
+
+#buttonAll:hover {
+  font-size: 16px;
+  color: white;
+  background: #e0475b;
+  box-shadow: 3px 3px #102542;
+}
+
+.descriptionProjet {
+  width: 400px;
+  display: flex;
+  align-content: center;
+}
+
+.texteProjet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.PROJETS .front {
+  background-position: center;
+}
+
+#neverLeak {
+  background-image: url("../img/neverleak.png");
+  background-position: bottom;
+  background-color: #f8efea;
+  box-shadow: none;
+}
+
+#codeneverLeak {
+  background-image: url("../img/code_neverleak.png");
+  background-position: center;
+}
+
+#insta {
+  background-image: url("../img/insta.png");
+  background-position: top;
+}
+
+#codeInsta {
+  background-image: url("../img/code_insta.png");
+}
+
+#Wonderflower {
+  background-image: url("../img/wonderflower_home.png");
+}
+
+#codeWonderflower {
+  background-image: url("../img/code_wonderflower.png");
+}
+
+#RSrecettes {
+  background-image: url("../img/rs_recettes3.png");
+}
+
+#codeRSrecettes {
+  background-image: url("../img/code_rs_recettes.png");
+}
+
+#extensionProjet {
+  background-image: url("../img/extension2.png");
+}
+
+#codeExtensionProjet {
+  background-image: url("../img/code_extension.png");
+}
+
+#mastermindProjet {
+  background-image: url("../img/mastermind2.png");
+}
+
+#codeMastermindProjet {
+  background-image: url("../img/code_mastermind.png");
+}
+
+#datavizProjet {
+  background-image: url("../img/dataviz3.png");
+}
+
+#codeDatavizProjet {
+  background-image: url("../img/code_dataviz.png");
+}
+
+#pico8Projet {
+  background-image: url("../img/pico8.png");
+}
+
+#codePico8Projet {
+  background-image: url("../img/code_pico8.png");
+}
+
+#reactProjet {
+  background-image: url("../img/todo-react.png");
+}
+
+#codeReactProjet {
+  background-image: url("../img/code_todo-react.png");
+}
+
+.imageProjet {
+  width: 700px;
+  margin: 2%;
+  perspective: 1200px;
+  transition: all 0.3s ease 0s;
+}
+
+.imageProjet .card {
+  height: 450px;
+  margin: 20px 0;
+}
+
+.imageProjet:hover .card {
+  transform: rotateY(180deg);
+}
+
+.boutonProjet {
+  background-color: #102542;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 8px 15px;
+  border: none;
+  box-shadow: 3px 3px #e0475b;
+  cursor: pointer;
+  text-decoration: none;
+  align-self: center;
+  transition: all 0.4s ease;
+  flex: 0 0 auto;
+  width: 170px;
+}
+
+.boutonProjet:hover {
+  font-size: 16px;
+  color: white;
+  background: #e0475b;
+  box-shadow: 3px 3px #102542;
+  width: 175px;
+}
+
+.langage {
+  color: #e0475b;
+  font-weight: bold;
+}
+
+.github {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.githubRepo {
+  font-size: 14px;
+  font-style: italic;
+  text-decoration: none;
+  color: #102542;
+}
+
+.githubRepo:hover {
+  color: #e0475b;
+}
+
+.githubLogo {
+  height: 20px;
+  margin-right: 5px;
+}
+
+/* CONTENU DE LA PAGE : expériences pro */
+.experiencesPro li {
+  font-size: 16px;
+  text-align: left;
+  padding: 5px 0 5px 0;
+}
+
+.experiencesPro h3 {
+  font-size: 25px;
+  padding: 0 0 20px 0;
+}
+
+.experiencesPro h4 {
+  font-size: 20px;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+/* CONTENU DE LA PAGE : formations */
+.description ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  align-items: flex-start;
+  padding: 0;
+  margin-left: 1.2em;
+}
+
+.description li {
+  text-align: left;
+}
+
+/* CARTES QUI SE RETOURNENT */
+.formations,
+.experiencesPro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardBox {
+  margin: 2%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+}
+
+.formations .cardBox {
+  width: 300px;
+}
+
+.experiencesPro .cardBox {
+  width: 400px;
+}
+
+.cardBox:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  animation: giro 2.5s 1;
+}
+
+.formations .card {
+  height: 300px;
+}
+
+.experiencesPro .card {
+  height: 400px;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  /* display: block; */
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.card .front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #102542;
+  color: WHITE;
+  background-size: cover;
+  box-shadow: 3px 3px #f3c4c0;
+}
+
+.card .back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: rotateY(180deg);
+  color: #102542;
+  background: url("../img/AdobeStock_209206510-25.png");
+  box-shadow: 3px 3px #102542;
+}
+
+.card .back .formations {
+  background-position: bottom;
+}
+
+.card .back .experiencesPro {
+  background-position: center;
+}
+@keyframes giro {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+/* FOOTER */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: white;
+  text-align: center;
+  padding: 40px 0 10px 0;
+  background: url("../img/pexels-secret-garden-931177-horizontal.png");
+  background-position: bottom;
+  background-size: cover;
+}
+
+#footer div {
+  width: 300px;
+  height: 70px;
+}
+
+#footer a {
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #102542;
+  background-color: #ffe8e6;
+  box-shadow: 3px 3px #102542;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 200px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: all 0.4s ease;
+}
+
+#footer a:hover {
+  font-size: 16px;
+  color: white;
+  background: #e0475b;
+  box-shadow: 3px 3px #102542;
+  width: 210px;
+}
+
+/*ne s'exécute que quand la largeur d'écran est <= 1100px*/
+@media screen and (max-width: 1100px) {
+  #menuScroll {
+    position: relative;
+  }
+  .page-content h2 {
+    font-size: 50px !important;
+  }
+  .title span {
+    letter-spacing: 10px;
+    top: -23px;
+    font-size: 80px;
+  }
+  .page-content h2 {
+    margin: 0 0 40px 0;
+  }
+  .boutonMenuProjet {
+    font-size: 13px;
+    width: 140px;
+  }
+  .boutonMenuProjet:hover {
+    font-size: 13px;
+  }
+  #buttonAll {
+    font-size: 13px;
+    width: 140px;
+  }
+  #buttonAll:hover {
+    font-size: 13px;
+  }
+}
+/*ne s'exécute que quand la largeur d'écran est <= 700px*/
+@media screen and (max-width: 700px) {
+  .navScroll {
+    display: none;
+  }
+  h1 {
+    font-size: 70px !important;
+    text-shadow: 5px 5px #102542 !important;
+    letter-spacing: 4px;
+  }
+  header h2 {
+    font-size: 30px !important;
+    text-shadow: 1.5px 1.5px white !important;
+    letter-spacing: 1px;
+  }
+  .page-content h2 {
+    font-size: 40px !important;
+    letter-spacing: 5px !important;
+  }
+  .cardBox {
+    margin: 4%;
+  }
+  .middle {
+    padding: 0 20px 0 20px;
+  }
+  .right {
+    display: none;
+  }
+  .content h3,
+  p {
+    margin: 0;
+  }
+  p {
+    padding-bottom: 10px;
+  }
+  .experiencesPro .card {
+    height: 400px;
+  }
+  .experiencesPro li {
+    font-size: 16px;
+    padding: 2px 0 2px 0;
+  }
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .colonne {
+    max-width: 80%;
+  }
+  .PROJETS {
+    margin: 8% 0 0 0;
+  }
+  .section-projets,
+  .section-pro,
+  .section-education {
+    margin: 10px 3%;
+  }
+  .title span {
+    letter-spacing: 8px;
+    font-size: 50px;
+    top: -8px;
+  }
+}
+/*ne s'exécute que quand la largeur d'écran est <= 500px*/
+@media screen and (max-width: 500px) {
+  .title span {
+    letter-spacing: 7px;
+    font-size: 40px;
+    top: 0px;
+  }
+}/*# sourceMappingURL=styles.css.map */

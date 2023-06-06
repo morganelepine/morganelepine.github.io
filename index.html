@@ -1,499 +1,790 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <title>Morgane LU</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="icon" href="morganelu.ico" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <meta charset="UTF-8" />
+    </head>
 
-<head>
-    <title>Morgane LU</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="morganelu.ico" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <meta charset="UTF-8">
-    
-</head>
+    <body>
+        <!-- HEADER -->
 
-<body>
-
-    <!-- HEADER -->
-
-    <section id="header" class="parallax">
-
-        <!--MENU-->
-        <div id="menuScroll">
-            <div class="navScroll">
-                <input type="checkbox">
-                <span></span>
-                <span></span>
-                <ul class="menu">
-                    <li><a href="#projets">Projets réalisés</a></li>
-                    <li><a href="#pro">Expériences pro</a></li>
-                    <li><a href="#education">Formations</a></li>
-                    <li><a href="#footer">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!--TITRE-->
-        <div id="titreHeader">
-            <header>
-                <h1>Hey, c'est Morgane</h1>
-                <h2 >Développeuse en devenir</h2>
-            </header>
-        </div>
-
-    </section>
-
-
-    <!-- CONTENU DE LA PAGE -->
-
-    <section class="page-content">
-
-        <!-- PROJETS -->
-        <section class="section-projets one" data-color="#F8EFEA" id="projets">
-
-            <h2 class="title">Projets <span>Projets</span></h2>
-
-            <!-- Menu projets -->
-            <div id="menuProjets">
-                <button class="boutonMenuProjet" id="buttonJS">JavaScript / HTML</button>
-                <button class="boutonMenuProjet" id="buttonMern">MERN</button>
-                <button class="boutonMenuProjet" id="buttonPHP">PHP / MySQL</button>
-                <button class="boutonMenuProjet" id="buttonLua">Lua</button>
-                <button id="buttonAll">Tous les projets</button>
-
-            </div>
-
-            <!-- Blocs projets -->
-
-            <div class="PROJETS mern">
-
-                <div class="descriptionProjet" data-aos="fade-up">
-                    <div class="texteProjet">
-                        <div>
-                            <lord-icon
-                                src="https://cdn.lordicon.com/wutqoutb.json"
-                                trigger="loop"
-                                colors="primary:#102542,secondary:#E0475B"
-                                style="width:60px;height:60px">
-                            </lord-icon>
-                        </div>
-                        <h3>Site e-commerce</h3>
-                        <p class="description">Développement d'une plateforme de gestion d'un fleuriste.</p>
-                        <p class="langage">React | MongoDB | Express | Node | Tailwind</p>
-                        <a href='https://wonderflower.vercel.app/'
-                        class="boutonProjet"
-                        target="_blank">
-                        ➔ Découvrir le projet
-                        </a>
-                        <div class="github">
-                            <img src="./img/github.png" alt="Logo Github" class="githubLogo">
-                            <a
-                                href='https://github.com/adatechschool/projet_collectif_vente_de_fleurs-FRONTEND'
-                                class="githubRepo"
-                                target="_blank">
-                                Repo front ~ 
-                            </a>
-                            <a
-                                href='https://github.com/adatechschool/projet_collectif_vente_de_fleurs-BACKEND'
-                                class="githubRepo"
-                                target="_blank">
-                                ~ Repo back
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="imageProjet" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="front" id="Wonderflower"></div>
-                        <div class="back" id="codeWonderflower"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="PROJETS php">
-
-                <div class="descriptionProjet" data-aos="fade-up">
-                    <div class="texteProjet">
-                        <div>
-                            <lord-icon
-                                src="https://cdn.lordicon.com/kdruzgxz.json"
-                                trigger="loop"
-                                colors="primary:#102542,secondary:#E0475B"
-                                style="width:60px;height:60px">
-                            </lord-icon>
-                        </div>
-                        <h3>Réseau social</h3>
-                        <p class="description">Création d'un réseau social pour partager, liker, commenter des recettes de cocktails.</p>
-                        <p class="langage">PHP | MySQL | Bootstrap</p>
-                        <a href='https://recettes-cocktails.herokuapp.com/'
-                        class="boutonProjet"
-                        target="_blank">
-                        ➔ Découvrir le projet
-                        </a>
-                        <div class="github">
-                            <img src="./img/github.png" alt="Logo Github" class="githubLogo">
-                            <a
-                                href='https://github.com/morganelepine/Recettes-PHP-MySQL-Bootstrap'
-                                class="githubRepo"
-                                target="_blank">
-                                Repo Github
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="imageProjet" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="front" id="RSrecettes"></div>
-                        <div class="back" id="codeRSrecettes"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="PROJETS js">
-
-                <div class="descriptionProjet" data-aos="fade-up">
-                    <div class="texteProjet">
-                        <div>
-                            <lord-icon
-                                src="https://cdn.lordicon.com/gaqzgxto.json"
-                                trigger="loop"
-                                colors="primary:#102542,secondary:#E0475B"
-                                style="width:60px;height:60px">
-                            </lord-icon>                        </div>
-                        <h3>Extension de navigateur</h3>
-                        <p class="description">Création d'une page d'accueil regroupant des modules liés à l'environnement.</p>
-                        <p class="langage">JavaScript | HTML | CSS</p>
-                        <a href='https://github.com/morganelepine/Extension_navigateur'
-                            class="boutonProjet"
-                            target="_blank">➔ Repo Github</a>
-                    </div>
-                </div>
-
-                <div class="imageProjet" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="front" id="extensionProjet"></div>
-                        <div class="back" id="codeExtensionProjet"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="PROJETS js">
-
-                <div class="descriptionProjet" data-aos="fade-up">
-                    <div class="texteProjet">
-                        <div>
-                            <lord-icon
-                                src="https://cdn.lordicon.com/rwotyanb.json"
-                                trigger="hover"
-                                colors="primary:#102542,secondary:#E0475B"
-                                style="width:60px;height:60px">
-                            </lord-icon>
-                        </div>
-                        <h3>Mastermind</h3>
-                        <p class="description">Développement d'un jeu Mastermind responsive.</p>
-                        <p class="langage">JavaScript | HTML | CSS</p>
-                        <a href='https://guileless-pithivier-1e0a9a.netlify.app/'
-                            class="boutonProjet"
-                            target="_blank">➔ Découvrir le projet</a>
-                        <div class="github">
-                            <img src="./img/github.png" alt="Logo Github" class="githubLogo">
-                            <a
-                                href='https://github.com/morganelepine/Mastermind'
-                                class="githubRepo"
-                                target="_blank">
-                                Repo Github
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="imageProjet" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="front" id="mastermindProjet"></div>
-                        <div class="back" id="codeMastermindProjet"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="PROJETS js">
-
-                <div class="descriptionProjet" data-aos="fade-up">
-                    <div class="texteProjet">
-                        <div>
-                            <lord-icon
-                                src="https://cdn.lordicon.com/etwtznjn.json"
-                                trigger="loop"
-                                colors="primary:#102542,secondary:#E0475B"
-                                style="width:60px;height:60px">
-                            </lord-icon>
-                        </div>
-                        <h3>Dataviz & API</h3>
-                        <p class="description">Développement d'un site web permettant de visualiser des données de façon dynamique.</p>
-                        <p class="langage">JavaScript | HTML | CSS</p>
-                        <a href='https://storied-kangaroo-83f733.netlify.app/'
-                            class="boutonProjet"
-                            target="_blank">➔ Découvrir le projet</a>
-                        <div class="github">
-                            <img src="./img/github.png" alt="Logo Github" class="githubLogo">
-                            <a
-                                href='https://github.com/morganelepine/AsteAstro-Dataviz-API'
-                                class="githubRepo"
-                                target="_blank">
-                                Repo Github
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="imageProjet" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="front" id="datavizProjet"></div>
-                        <div class="back" id="codeDatavizProjet"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="PROJETS lua">
-
-                <div class="descriptionProjet" data-aos="fade-up">
-                    <div class="texteProjet">
-                        <div>
-                            <lord-icon
-                                src="https://cdn.lordicon.com/ofbvmdiz.json"
-                                trigger="loop"
-                                colors="primary:#102542,secondary:#E0475B"
-                                style="width:60px;height:60px">
-                            </lord-icon>                        </div>
-                        <h3>Jeu Pico-8</h3>
-                        <p class="description">Développement d'un jeu vidéo miniature sur la console imaginaire Pico-8. </p>
-                        <p class="langage">Lua</p>
-                        <a href='https://www.lexaloffle.com/bbs/?tid=50036'
-                            class="boutonProjet"
-                            target="_blank">➔ Découvrir le projet</a>
-                            
-                    </div>
-                </div>
-
-                <div class="imageProjet" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="front" id="pico8Projet"></div>
-                        <div class="back" id="codePico8Projet"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="PROJETS mern">
-
-                <div class="descriptionProjet" data-aos="fade-up">
-                    <div class="texteProjet">
-                        <div>
-                            <lord-icon
-                                src="https://cdn.lordicon.com/nkmsrxys.json"
-                                trigger="loop"
-                                colors="primary:#102542,secondary:#E0475B"
-                                style="width:60px;height:60px">
-                            </lord-icon>
-                        </div>
-                        <h3>Liste de cadeaux</h3>
-                        <p class="description">Plateforme de création de listes de cadeaux avec espace administrateur·ice pour consulter les listes, être informé·e des cadeaux pris... </p>
-                        <p class="langage">React | MongoDB | Express | Node | Tailwind</p>
-                        <a href='https://github.com/morganelepine/Todo-MERN-Tailwind'
-                            class="boutonProjet"
-                            target="_blank">
-                            ➔ Repo Github
-                        </a>
-                        <p class="githubRepo">Projet en cours</p>
-                    </div>
-                </div>
-
-                <div class="imageProjet" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="front" id="reactProjet"></div>
-                        <div class="back" id="codeReactProjet"></div>
-                    </div>
-                </div>
-
-            </div>
-    
-        </section>
-
-        
-        <!-- EXPERIENCES PRO -->
-        <section class="section-pro two" data-color="#fff" color="white" id="pro">
-
-            <h2 class="title">Expériences<span>Expériences</span></h2>
-
-            <div class="experiencesPro">
-
-                <div class="cardBox" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card">
-                        <div class="front" id="hed">
-                            <h3>Responsable Marketing</h3>
-                            <h4>Hachette Éducation</h4>
-                            <p class="date">Septembre 2016 - Septembre 2022</p>
-                        </div>
-                        <div class="back">
-                            <div class="description">
-                                <ul>
-                                    <li>Gestion du budget et du plan marketing</li>
-                                    <li>Création de documents promotionnels</li>
-                                    <li>Mise en œuvre de la stratégie e-marketing : newsletters, webinaires, vidéos...</li>
-                                    <li>Community management</li>
-                                    <li>Mise en place de tables rondes et d'enquêtes utilisateur·ices</li>
-                                    <li>Suivi de la concurrence et de l'évolution du marché</li>
-                                    <li>Encadrement d'un·e stagiaire</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cardBox"  data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="front" id="hatier">
-                            <h3>Cheffe de produits</h3>
-                            <h4>Diffusion Groupe Alexandre Hatier</h4>
-                            <p class="date">Mars 2016 - Août 2016</p>
-                        </div>
-                        <div class="back">
-                            <div class="description">
-                                <ul>
-                                    <li>Analyses de marchés, bilan des performances, études qualitatives auprès des client·es</li>
-                                    <li>Développement de l'activité numérique : veille concurrentielle, réponse aux appels d'offres d'opérations e-books</li>
-                                    <li>Soutien opérationnel : suivi de campagne, préparation du matériel commercial</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cardBox"  data-aos="fade-up" data-aos-delay="300">
-                    <div class="card">
-                        <div class="front" id="robert">
-                            <div class="content">
-                                <h3>Chargée de Marketing</h3>
-                                <h4>Éditions Le Robert</h4>
-                                <p class="date">Janvier 2015 - Décembre 2015</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="description">
-                                <ul>
-                                    <li>Analyses de marchés, veilles, études, définition du mix produit…</li>
-                                    <li>Développement et suivi des partenariats</li>
-                                    <li>Community management</li>
-                                    <li>Promotion des ouvrages : e-mailing, catalogues, PLV, sites…</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- FORMATIONS -->
-        <section class="section-education three" data-color="#F8EFEA" id="education">
-            
-            <h2 class="title">Formations<span>Formations</span></h2>
-            
-            <h3 data-aos="fade-up">Formations longues</h3>
-            <div class="formations" >
-                <div class="cardBox"  data-aos="fade-up" data-aos-delay="100">
-                    <div class="card">
-                        <div class="front formation" id="ada">
-                            <h4>Ada Tech School</h4>
-                            <div class="date">Octobre 2022 - Juillet 2024</div>
-                        </div>
-                        <div class="back">
-                            <div class="description">École d'informatique inclusive, où on apprend à coder avec une pédagogie alternative.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardBox"  data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="front formation" id="esce">
-                            <h4>École supérieure du commerce extérieur</h4>
-                            <div class="date">Septembre 2010 - Juillet 2015</div>
-                        </div>
-                        <div class="back">
-                            <div class="description">École de commerce en cinq ans délivrant le grade de Master.</div>
-                        </div>
-                    </div>
+        <section id="header" class="parallax">
+            <!--MENU-->
+            <div id="menuScroll">
+                <div class="navScroll">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <ul class="menu">
+                        <li><a href="#projets">Projets réalisés</a></li>
+                        <li><a href="#pro">Expériences pro</a></li>
+                        <li><a href="#education">Formations</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
                 </div>
             </div>
 
-            
-            <h3 data-aos="fade-up">Formations courtes</h3>
-            <div class="formations">
-                <div class="cardBox"  data-aos="fade-up" data-aos-delay="100">
-                    <div class="card">
-                        <div class="front formation" id="abilways">
-                            <h4>Mesurer sa performance sur les&nbspmédias sociaux</h4>
-                            <div class="date">Octobre 2021 | ABILWAYS</div>
-                        </div>
-                        <div class="back">
-                            <div class="description">Comprendre l'importance de mettre en place un reporting, définir ses indicateurs et créer ses tableaux de bord.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardBox"  data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <div class="front formation" id="openclassroom">
-                            <h4>Créez votre site web avec HTML5 et CSS3</h4>
-                            <div class="date">Février 2020 | OpenClassroom</div>
-                        </div>
-                        <div class="back">
-                            <div class="description">Maîtriser les bases de HTML5 ; faire de la mise en forme avec CSS3 ; agencer le contenu des pages ; utiliser des fonctionnalités avancées de HTML et CSS.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardBox"  data-aos="fade-up" data-aos-delay="300">
-                    <div class="card">
-                        <div class="front formation" id="pyramid">
-                            <h4>L'essentiel d'InDesign</h4>
-                            <div class="date">Novembre 2019 | PYRAMYD</div>
-                        </div>
-                        <div class="back">
-                            <div class="description">Maîtriser les fonctionnalités essentielles à la création et la correction d'un document (gabarit, calque, typographie, page, style...).</div>
-                        </div>
-                    </div>
-                </div>
+            <!--TITRE-->
+            <div id="titreHeader">
+                <header>
+                    <h1>Hey, c'est Morgane</h1>
+                    <h2>Développeuse en devenir</h2>
+                </header>
             </div>
         </section>
 
-    </section>
+        <!-- CONTENU DE LA PAGE -->
 
-    <!-- FOOTER -->
-    <footer id="footer">
-        <div>
-            <a href="mailto:m.lepineutter@gmail.com" target="_blank">Me contacter par mail</a>
-        </div>
-        <div>
-            <a href="https://www.linkedin.com/in/morgane-l%C3%A9pine-utter-a7bb5353/" target="_blank">Me suivre sur LinkedIn</a>
-        </div>
-        <div>
-            <a href="https://github.com/morganelepine/" target="_blank">Découvrir mon GitHub</a>
-        </div>
-        <div>
-            <a href="./img/CV_web_MLU.pdf" download target="_blank">Télécharger mon CV</a>
-        </div>
-    </footer>
-    
+        <section class="page-content">
+            <!-- PROJETS -->
+            <section
+                class="section-projets one"
+                data-color="#F8EFEA"
+                id="projets"
+            >
+                <h2 class="title">Projets <span>Projets</span></h2>
 
-    <!-- SCRIPTS -->
-    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-    <script src="script.js" type="module"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                <!-- Menu projets -->
+                <div id="menuProjets">
+                    <button class="boutonMenuProjet" id="buttonJS">
+                        JavaScript / HTML
+                    </button>
+                    <button class="boutonMenuProjet" id="buttonMern">
+                        MERN
+                    </button>
+                    <button class="boutonMenuProjet" id="buttonPHP">
+                        PHP / MySQL
+                    </button>
+                    <button class="boutonMenuProjet" id="buttonMobile">
+                        React native
+                    </button>
+                    <button class="boutonMenuProjet" id="buttonLua">Lua</button>
+                    <button id="buttonAll">Tous les projets</button>
+                </div>
 
-</body>
+                <!-- Blocs projets -->
+
+                <div class="PROJETS mobile">
+                    <div class="descriptionProjet" data-aos="fade-up">
+                        <div class="texteProjet">
+                            <div>
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/oyclgnwc.json"
+                                    trigger="loop"
+                                    colors="primary:#102542,secondary:#e0475b"
+                                    style="width: 60px; height: 60px"
+                                >
+                                </lord-icon>
+                            </div>
+                            <h3>App mobile</h3>
+                            <p class="description">
+                                Développement d'une application de suivi du
+                                cycle menstruel.
+                            </p>
+                            <p class="langage">
+                                React Native | Supabase | PostgreSQL
+                            </p>
+                            <a
+                                href="https://github.com/adatechschool/NeverLeak_front"
+                                class="boutonProjet"
+                                target="_blank"
+                            >
+                                ➔ Repo Github
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="imageProjet"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="card">
+                            <div class="front" id="neverLeak"></div>
+                            <div class="back" id="codeneverLeak"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="PROJETS php">
+                    <div class="descriptionProjet" data-aos="fade-up">
+                        <div class="texteProjet">
+                            <div>
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/vixtkkbk.json"
+                                    trigger="loop"
+                                    colors="primary:#102542,secondary:#e0475b"
+                                    style="width: 60px; height: 60px"
+                                >
+                                </lord-icon>
+                            </div>
+                            <h3>Plateforme de microblogging</h3>
+                            <p class="description">
+                                Création d'un "clone" d'Instagram :
+                                inscription/connexion, profil éditable, création
+                                de posts associant texte et image, suivi des
+                                likes...
+                            </p>
+                            <p class="langage">
+                                PHP | Laravel | MySQL | Tailwind
+                            </p>
+                            <a
+                                href="https://github.com/adatechschool/projet-collectif-microblogging-IsaMoJo"
+                                class="boutonProjet"
+                                target="_blank"
+                            >
+                                ➔ Repo Github
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="imageProjet"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="card">
+                            <div class="front" id="insta"></div>
+                            <div class="back" id="codeInsta"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="PROJETS mern">
+                    <div class="descriptionProjet" data-aos="fade-up">
+                        <div class="texteProjet">
+                            <div>
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/wutqoutb.json"
+                                    trigger="loop"
+                                    colors="primary:#102542,secondary:#e0475b"
+                                    style="width: 60px; height: 60px"
+                                >
+                                </lord-icon>
+                            </div>
+                            <h3>Site e-commerce</h3>
+                            <p class="description">
+                                Développement d'une plateforme de gestion d'un
+                                fleuriste : espace administrateur·ice, ajout au
+                                panier...
+                            </p>
+                            <p class="langage">
+                                React | MongoDB | Express | Node | Tailwind
+                            </p>
+                            <a
+                                href="https://wonderflower.vercel.app/"
+                                class="boutonProjet"
+                                target="_blank"
+                            >
+                                ➔ Découvrir le projet
+                            </a>
+                            <div class="github">
+                                <img
+                                    src="./img/github.png"
+                                    alt="Logo Github"
+                                    class="githubLogo"
+                                />
+                                <a
+                                    href="https://github.com/adatechschool/projet_collectif_vente_de_fleurs-FRONTEND"
+                                    class="githubRepo"
+                                    target="_blank"
+                                >
+                                    Repo front ~
+                                </a>
+                                <a
+                                    href="https://github.com/adatechschool/projet_collectif_vente_de_fleurs-BACKEND"
+                                    class="githubRepo"
+                                    target="_blank"
+                                >
+                                    ~ Repo back
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="imageProjet"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="card">
+                            <div class="front" id="Wonderflower"></div>
+                            <div class="back" id="codeWonderflower"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="PROJETS php">
+                    <div class="descriptionProjet" data-aos="fade-up">
+                        <div class="texteProjet">
+                            <div>
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/kdruzgxz.json"
+                                    trigger="loop"
+                                    colors="primary:#102542,secondary:#e0475b"
+                                    style="width: 60px; height: 60px"
+                                >
+                                </lord-icon>
+                            </div>
+                            <h3>Réseau social</h3>
+                            <p class="description">
+                                Création d'un réseau social pour partager,
+                                liker, commenter des recettes de cocktails.
+                            </p>
+                            <p class="langage">PHP | MySQL | Bootstrap</p>
+                            <a
+                                href="https://recettes-cocktails.herokuapp.com/"
+                                class="boutonProjet"
+                                target="_blank"
+                            >
+                                ➔ Découvrir le projet
+                            </a>
+                            <div class="github">
+                                <img
+                                    src="./img/github.png"
+                                    alt="Logo Github"
+                                    class="githubLogo"
+                                />
+                                <a
+                                    href="https://github.com/morganelepine/Recettes-PHP-MySQL-Bootstrap"
+                                    class="githubRepo"
+                                    target="_blank"
+                                >
+                                    Repo Github
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="imageProjet"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="card">
+                            <div class="front" id="RSrecettes"></div>
+                            <div class="back" id="codeRSrecettes"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="PROJETS js">
+                    <div class="descriptionProjet" data-aos="fade-up">
+                        <div class="texteProjet">
+                            <div>
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/gaqzgxto.json"
+                                    trigger="loop"
+                                    colors="primary:#102542,secondary:#e0475b"
+                                    style="width: 60px; height: 60px"
+                                >
+                                </lord-icon>
+                            </div>
+                            <h3>Extension de navigateur</h3>
+                            <p class="description">
+                                Création d'une page d'accueil regroupant des
+                                modules liés à l'environnement : derniers
+                                articles et podcasts sur le sujet, plante du
+                                jour...
+                            </p>
+                            <p class="langage">JavaScript | HTML | CSS</p>
+                            <a
+                                href="https://github.com/morganelepine/Extension_navigateur"
+                                class="boutonProjet"
+                                target="_blank"
+                                >➔ Repo Github</a
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="imageProjet"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="card">
+                            <div class="front" id="extensionProjet"></div>
+                            <div class="back" id="codeExtensionProjet"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="PROJETS js">
+                    <div class="descriptionProjet" data-aos="fade-up">
+                        <div class="texteProjet">
+                            <div>
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/rwotyanb.json"
+                                    trigger="hover"
+                                    colors="primary:#102542,secondary:#e0475b"
+                                    style="width: 60px; height: 60px"
+                                >
+                                </lord-icon>
+                            </div>
+                            <h3>Mastermind</h3>
+                            <p class="description">
+                                Développement d'un jeu Mastermind responsive.
+                            </p>
+                            <p class="langage">JavaScript | HTML | CSS</p>
+                            <a
+                                href="https://guileless-pithivier-1e0a9a.netlify.app/"
+                                class="boutonProjet"
+                                target="_blank"
+                                >➔ Découvrir le projet</a
+                            >
+                            <div class="github">
+                                <img
+                                    src="./img/github.png"
+                                    alt="Logo Github"
+                                    class="githubLogo"
+                                />
+                                <a
+                                    href="https://github.com/morganelepine/Mastermind"
+                                    class="githubRepo"
+                                    target="_blank"
+                                >
+                                    Repo Github
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="imageProjet"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="card">
+                            <div class="front" id="mastermindProjet"></div>
+                            <div class="back" id="codeMastermindProjet"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="PROJETS js">
+                    <div class="descriptionProjet" data-aos="fade-up">
+                        <div class="texteProjet">
+                            <div>
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/etwtznjn.json"
+                                    trigger="loop"
+                                    colors="primary:#102542,secondary:#e0475b"
+                                    style="width: 60px; height: 60px"
+                                >
+                                </lord-icon>
+                            </div>
+                            <h3>Dataviz & API</h3>
+                            <p class="description">
+                                Développement d'un site web permettant de
+                                visualiser des données de la NASA de façon
+                                dynamique : la photo astronomique du jour et
+                                l'astéroïde le plus proche de la terre à une
+                                date donnée.
+                            </p>
+                            <p class="langage">JavaScript | HTML | CSS</p>
+                            <a
+                                href="https://storied-kangaroo-83f733.netlify.app/"
+                                class="boutonProjet"
+                                target="_blank"
+                                >➔ Découvrir le projet</a
+                            >
+                            <div class="github">
+                                <img
+                                    src="./img/github.png"
+                                    alt="Logo Github"
+                                    class="githubLogo"
+                                />
+                                <a
+                                    href="https://github.com/morganelepine/AsteAstro-Dataviz-API"
+                                    class="githubRepo"
+                                    target="_blank"
+                                >
+                                    Repo Github
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="imageProjet"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="card">
+                            <div class="front" id="datavizProjet"></div>
+                            <div class="back" id="codeDatavizProjet"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="PROJETS lua">
+                    <div class="descriptionProjet" data-aos="fade-up">
+                        <div class="texteProjet">
+                            <div>
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/ofbvmdiz.json"
+                                    trigger="loop"
+                                    colors="primary:#102542,secondary:#e0475b"
+                                    style="width: 60px; height: 60px"
+                                >
+                                </lord-icon>
+                            </div>
+                            <h3>Jeu Pico-8</h3>
+                            <p class="description">
+                                Développement d'un jeu vidéo miniature sur la
+                                console imaginaire Pico-8.
+                            </p>
+                            <p class="langage">Lua</p>
+                            <a
+                                href="https://www.lexaloffle.com/bbs/?tid=50036"
+                                class="boutonProjet"
+                                target="_blank"
+                                >➔ Découvrir le projet</a
+                            >
+                        </div>
+                    </div>
+
+                    <div
+                        class="imageProjet"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="card">
+                            <div class="front" id="pico8Projet"></div>
+                            <div class="back" id="codePico8Projet"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="PROJETS mern">
+                    <div class="descriptionProjet" data-aos="fade-up">
+                        <div class="texteProjet">
+                            <div>
+                                <lord-icon
+                                    src="https://cdn.lordicon.com/nkmsrxys.json"
+                                    trigger="loop"
+                                    colors="primary:#102542,secondary:#e0475b"
+                                    style="width: 60px; height: 60px"
+                                >
+                                </lord-icon>
+                            </div>
+                            <h3>Liste de cadeaux</h3>
+                            <p class="description">
+                                Plateforme de création de listes de cadeaux avec
+                                espace administrateur·ice pour consulter les
+                                listes, être informé·e des cadeaux pris...
+                            </p>
+                            <p class="langage">
+                                React | MongoDB | Express | Node | Tailwind
+                            </p>
+                            <a
+                                href="https://github.com/morganelepine/Todo-MERN-Tailwind"
+                                class="boutonProjet"
+                                target="_blank"
+                            >
+                                ➔ Repo Github
+                            </a>
+                            <p class="githubRepo">Projet en cours</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="imageProjet"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="card">
+                            <div class="front" id="reactProjet"></div>
+                            <div class="back" id="codeReactProjet"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPERIENCES PRO -->
+            <section
+                class="section-pro two"
+                data-color="#fff"
+                color="white"
+                id="pro"
+            >
+                <h2 class="title">Expériences<span>Expériences</span></h2>
+
+                <div class="experiencesPro">
+                    <div
+                        class="cardBox"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        <div class="card">
+                            <div class="front" id="hed">
+                                <h3>Responsable Marketing</h3>
+                                <h4>Hachette Éducation</h4>
+                                <p class="date">
+                                    Septembre 2016 - Septembre 2022
+                                </p>
+                            </div>
+                            <div class="back">
+                                <div class="description">
+                                    <ul>
+                                        <li>
+                                            Gestion du budget et du plan
+                                            marketing
+                                        </li>
+                                        <li>
+                                            Création de documents promotionnels
+                                        </li>
+                                        <li>
+                                            Mise en œuvre de la stratégie
+                                            e-marketing : newsletters,
+                                            webinaires, vidéos...
+                                        </li>
+                                        <li>Community management</li>
+                                        <li>
+                                            Mise en place de tables rondes et
+                                            d'enquêtes utilisateur·ices
+                                        </li>
+                                        <li>
+                                            Suivi de la concurrence et de
+                                            l'évolution du marché
+                                        </li>
+                                        <li>Encadrement d'un·e stagiaire</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="cardBox"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="card">
+                            <div class="front" id="hatier">
+                                <h3>Cheffe de produits</h3>
+                                <h4>Diffusion Groupe Alexandre Hatier</h4>
+                                <p class="date">Mars 2016 - Août 2016</p>
+                            </div>
+                            <div class="back">
+                                <div class="description">
+                                    <ul>
+                                        <li>
+                                            Analyses de marchés, bilan des
+                                            performances, études qualitatives
+                                            auprès des client·es
+                                        </li>
+                                        <li>
+                                            Développement de l'activité
+                                            numérique : veille concurrentielle,
+                                            réponse aux appels d'offres
+                                            d'opérations e-books
+                                        </li>
+                                        <li>
+                                            Soutien opérationnel : suivi de
+                                            campagne, préparation du matériel
+                                            commercial
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="cardBox"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+                        <div class="card">
+                            <div class="front" id="robert">
+                                <div class="content">
+                                    <h3>Chargée de Marketing</h3>
+                                    <h4>Éditions Le Robert</h4>
+                                    <p class="date">
+                                        Janvier 2015 - Décembre 2015
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="description">
+                                    <ul>
+                                        <li>
+                                            Analyses de marchés, veilles,
+                                            études, définition du mix produit…
+                                        </li>
+                                        <li>
+                                            Développement et suivi des
+                                            partenariats
+                                        </li>
+                                        <li>Community management</li>
+                                        <li>
+                                            Promotion des ouvrages : e-mailing,
+                                            catalogues, PLV, sites…
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FORMATIONS -->
+            <section
+                class="section-education three"
+                data-color="#F8EFEA"
+                id="education"
+            >
+                <h2 class="title">Formations<span>Formations</span></h2>
+
+                <h3 data-aos="fade-up">Formations longues</h3>
+                <div class="formations">
+                    <div
+                        class="cardBox"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        <div class="card">
+                            <div class="front formation" id="ada">
+                                <h4>Ada Tech School</h4>
+                                <div class="date">
+                                    Octobre 2022 - Juillet 2024
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="description">
+                                    École d'informatique inclusive, où on
+                                    apprend à coder avec une pédagogie
+                                    alternative.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="cardBox"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="card">
+                            <div class="front formation" id="esce">
+                                <h4>École supérieure du commerce extérieur</h4>
+                                <div class="date">
+                                    Septembre 2010 - Juillet 2015
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="description">
+                                    École de commerce en cinq ans délivrant le
+                                    grade de Master.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 data-aos="fade-up">Formations courtes</h3>
+                <div class="formations">
+                    <div
+                        class="cardBox"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        <div class="card">
+                            <div class="front formation" id="abilways">
+                                <h4>
+                                    Mesurer sa performance sur les&nbspmédias
+                                    sociaux
+                                </h4>
+                                <div class="date">Octobre 2021 | ABILWAYS</div>
+                            </div>
+                            <div class="back">
+                                <div class="description">
+                                    Comprendre l'importance de mettre en place
+                                    un reporting, définir ses indicateurs et
+                                    créer ses tableaux de bord.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="cardBox"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="card">
+                            <div class="front formation" id="openclassroom">
+                                <h4>Créez votre site web avec HTML5 et CSS3</h4>
+                                <div class="date">
+                                    Février 2020 | OpenClassroom
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="description">
+                                    Maîtriser les bases de HTML5 ; faire de la
+                                    mise en forme avec CSS3 ; agencer le contenu
+                                    des pages ; utiliser des fonctionnalités
+                                    avancées de HTML et CSS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="cardBox"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+                        <div class="card">
+                            <div class="front formation" id="pyramid">
+                                <h4>L'essentiel d'InDesign</h4>
+                                <div class="date">Novembre 2019 | PYRAMYD</div>
+                            </div>
+                            <div class="back">
+                                <div class="description">
+                                    Maîtriser les fonctionnalités essentielles à
+                                    la création et la correction d'un document
+                                    (gabarit, calque, typographie, page,
+                                    style...).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div>
+                <a href="mailto:m.lepineutter@gmail.com" target="_blank"
+                    >Me contacter par mail</a
+                >
+            </div>
+            <div>
+                <a
+                    href="https://www.linkedin.com/in/morgane-l%C3%A9pine-utter-a7bb5353/"
+                    target="_blank"
+                    >Me suivre sur LinkedIn</a
+                >
+            </div>
+            <div>
+                <a href="https://github.com/morganelepine/" target="_blank"
+                    >Découvrir mon GitHub</a
+                >
+            </div>
+            <div>
+                <a href="./img/CV_web_MLU.pdf" download target="_blank"
+                    >Télécharger mon CV</a
+                >
+            </div>
+        </footer>
+
+        <!-- SCRIPTS -->
+        <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+        <script src="script.js" type="module"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    </body>
 </html>

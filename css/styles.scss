@@ -1,37 +1,55 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap");
 
 @font-face {
     font-family: "Happy-Day";
     src: url("/fonts/Happy-Day.ttf") format(‘truetype’);
 }
 
-body
-{
-    /*padding: 2%; 2% de la page*/
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #F8EFEA;
-    color: #102542;
+//------------VARIABLES
+$dark-color: #102542;
+$medium-color: #e0475b;
+$light-color: #f3c4c0;
+$background-color: #f8efea;
+
+//------------MIXIN
+@mixin flex-colum {
+    display: flex;
+    flex-direction: column;
+}
+@mixin box-shadow($color) {
+    box-shadow: 3px 3px $color;
+    //box-shadow: 3px 3px lighten($color, 20%);
 }
 
+//------------SCSS
+
+body {
+    /*padding: 2%; 2% de la page*/
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: $background-color;
+    color: $dark-color;
+}
 
 /*Menu au scroll*/
 
-#menuScroll{
+#menuScroll {
     position: fixed;
     top: 10px;
     left: 10px;
 }
 
-#menuScroll, .navScroll, .menu, ul {
+#menuScroll,
+.navScroll,
+.menu,
+ul {
     display: flex;
     align-items: center;
 }
 
 .navScroll {
     position: relative;
-    background-color: #102542;
+    background-color: $dark-color;
     padding: 10px;
     transition: 0.5s;
     border-radius: 50px;
@@ -61,7 +79,7 @@ body
 }
 
 .navScroll input:checked ~ span {
-    background-color: #E0475B;
+    background-color: $medium-color;
 }
 .navScroll span:nth-child(2) {
     transform: translateY(-8px);
@@ -98,13 +116,12 @@ body
 }
 
 .menu li a:hover {
-    color: #E0475B;
+    color: $medium-color;
 }
-
 
 /* HEADER */
 
-.parallax{
+.parallax {
     background: url("../img/pexels-secret-garden-931177-horizontal.png");
     height: 100vh; /* Prendra 100% de la hauteur du viewport, et donc de l'écran */
     background-repeat: no-repeat;
@@ -113,94 +130,85 @@ body
     background-size: cover;
 }
 
-#header
-{
-    display: flex;
+#header {
+    @include flex-colum;
     text-align: center;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
-#titreHeader
-{
+#titreHeader {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-#header h1
-{
+#header h1 {
     margin: 0;
     padding: 20px;
     text-transform: uppercase;
     color: white;
-    text-shadow: 6px 6px #102542;
+    text-shadow: 6px 6px $dark-color;
     letter-spacing: 6px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
     font-size: 140px;
 }
 
-#header h2{
+#header h2 {
     margin: 0;
     color: 102542;
     text-shadow: 3px 3px white;
     letter-spacing: 6px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: "Bebas Neue", cursive;
     font-size: 50px;
 }
-
 
 /* CONTENU DE LA PAGE */
 
 .title {
     position: relative;
     font-weight: 300;
-    color: #102542;
+    color: $dark-color;
     letter-spacing: 10px;
     text-align: center;
 }
 
-.title span{
-	z-index: 0;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: -57px;
-	text-align: center;
-	opacity: 0.07;
+.title span {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -57px;
+    text-align: center;
+    opacity: 0.07;
     letter-spacing: 20px;
-	font-size: 130px;
-	font-weight: 700;
+    font-size: 130px;
+    font-weight: 700;
 }
 
-.page-content h2
-{
+.page-content h2 {
     font-size: 55px;
     text-transform: uppercase;
     margin: 0 0 70px 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-.page-content h3
-{
+.page-content h3 {
     text-transform: uppercase;
     font-size: 30px;
     text-align: center;
     margin: 0;
 }
 
-.page-content h4
-{
-    font-family: 'Lato', sans-serif;
+.page-content h4 {
+    font-family: "Lato", sans-serif;
     font-size: 20px;
     text-align: center;
     margin: 0;
 }
 
-.date
-{
+.date {
     font-size: 14px;
     font-style: italic;
     margin: 0;
@@ -208,23 +216,21 @@ body
     text-align: center;
 }
 
-
 /* CONTENU DE LA PAGE : organisation des div */
 
-.page-content{
-    display: flex;
-    flex-direction: column;
+.page-content {
+    @include flex-colum;
 }
 
-.section-projets, .section-pro, .section-education
-{
+.section-projets,
+.section-pro,
+.section-education {
     padding: 7% 0;
 }
 
-
 /* CONTENU DE LA PAGE : projets */
 
-.PROJETS{
+.PROJETS {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -232,7 +238,7 @@ body
     margin: 0 2%;
 }
 
-#menuProjets{
+#menuProjets {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -240,9 +246,9 @@ body
     margin: 40px;
 }
 
-.boutonMenuProjet{
-    background-color: #102542;
-    box-shadow: 2px 2px #E0475B;
+.boutonMenuProjet {
+    background-color: $dark-color;
+    @include box-shadow($medium-color);
     border: none;
     border-radius: 10px;
     color: white;
@@ -258,17 +264,17 @@ body
 .boutonMenuProjet:hover {
     font-size: 16px;
     color: white;
-    background: #E0475B;
-    box-shadow: 3px 3px #102542;
+    background: $medium-color;
+    @include box-shadow($dark-color);
 }
 
-#buttonAll{
+#buttonAll {
     display: none;
-    background-color: #f3c4c0;
-    box-shadow: 2px 2px #102542;
+    background-color: $light-color;
+    @include box-shadow($dark-color);
     border: none;
     border-radius: 10px;
-    color: #102542;
+    color: $dark-color;
     font-size: 15px;
     text-decoration: none;
     padding: 8px 15px;
@@ -281,8 +287,8 @@ body
 #buttonAll:hover {
     font-size: 16px;
     color: white;
-    background: #E0475B;
-    box-shadow: 3px 3px #102542;
+    background: $medium-color;
+    @include box-shadow($dark-color);
 }
 
 .descriptionProjet {
@@ -291,163 +297,176 @@ body
     align-content: center;
 }
 
-.texteProjet{
-    display: flex;
-    flex-direction: column;
+.texteProjet {
+    @include flex-colum;
     justify-content: center;
     text-align: center;
 }
 
-.PROJETS .front{
+.PROJETS .front {
     background-position: center;
 }
 
-#Wonderflower{
-    background-image : url("../img/wonderflower_home.png");
+#neverLeak {
+    background-image: url("../img/neverleak.png");
+    background-position: bottom;
+    background-color: $background-color;
+    box-shadow: none;
 }
-#codeWonderflower{
-    background-image : url("../img/code_wonderflower.png");
-}
-
-#RSrecettes{
-    background-image : url("../img/rs_recettes3.png");
-}
-#codeRSrecettes{
-    background-image : url("../img/code_rs_recettes.png");
+#codeneverLeak {
+    background-image: url("../img/code_neverleak.png");
+    background-position: center;
 }
 
-#extensionProjet{
-    background-image : url("../img/extension2.png");
+#insta {
+    background-image: url("../img/insta.png");
+    background-position: top;
 }
-#codeExtensionProjet{
-    background-image : url("../img/code_extension.png");
-}
-
-#mastermindProjet{
-    background-image : url("../img/mastermind2.png");
-}
-#codeMastermindProjet{
-    background-image : url("../img/code_mastermind.png");
+#codeInsta {
+    background-image: url("../img/code_insta.png");
 }
 
-#datavizProjet{
-    background-image : url("../img/dataviz3.png");
+#Wonderflower {
+    background-image: url("../img/wonderflower_home.png");
 }
-#codeDatavizProjet{
-    background-image : url("../img/code_dataviz.png");
-}
-
-#pico8Projet{
-    background-image : url("../img/pico8.png");
-}
-#codePico8Projet{
-    background-image : url("../img/code_pico8.png");
+#codeWonderflower {
+    background-image: url("../img/code_wonderflower.png");
 }
 
-#reactProjet{
-    background-image : url("../img/todo-react.png");
+#RSrecettes {
+    background-image: url("../img/rs_recettes3.png");
 }
-#codeReactProjet{
-    background-image : url("../img/code_todo-react.png");
+#codeRSrecettes {
+    background-image: url("../img/code_rs_recettes.png");
+}
+
+#extensionProjet {
+    background-image: url("../img/extension2.png");
+}
+#codeExtensionProjet {
+    background-image: url("../img/code_extension.png");
+}
+
+#mastermindProjet {
+    background-image: url("../img/mastermind2.png");
+}
+#codeMastermindProjet {
+    background-image: url("../img/code_mastermind.png");
+}
+
+#datavizProjet {
+    background-image: url("../img/dataviz3.png");
+}
+#codeDatavizProjet {
+    background-image: url("../img/code_dataviz.png");
+}
+
+#pico8Projet {
+    background-image: url("../img/pico8.png");
+}
+#codePico8Projet {
+    background-image: url("../img/code_pico8.png");
+}
+
+#reactProjet {
+    background-image: url("../img/todo-react.png");
+}
+#codeReactProjet {
+    background-image: url("../img/code_todo-react.png");
 }
 
 .imageProjet {
+    // @include flex-colum;
     width: 700px;
     margin: 2%;
     perspective: 1200px;
     transition: all 0.3s ease 0s;
 }
-        
+
 .imageProjet .card {
     height: 450px;
     margin: 20px 0;
 }
 
 .imageProjet:hover .card {
-    transform: rotateY( 180deg);
+    transform: rotateY(180deg);
 }
 
-.boutonProjet{
-    background-color: #102542;
+.boutonProjet {
+    background-color: $dark-color;
     color: white;
     font-size: 15px;
     border-radius: 10px;
     padding: 8px 15px;
     border: none;
-    box-shadow: 2px 2px #E0475B;
+    @include box-shadow($medium-color);
     cursor: pointer;
     text-decoration: none;
     align-self: center;
     transition: all 0.4s ease;
-    Flex: 0 0 auto;
+    flex: 0 0 auto;
     width: 170px;
 }
 
 .boutonProjet:hover {
     font-size: 16px;
     color: white;
-    background: #E0475B;
-    box-shadow: 3px 3px #102542;
+    background: $medium-color;
+    @include box-shadow($dark-color);
     width: 175px;
 }
 
-.langage{
-    color: #E0475B;
+.langage {
+    color: $medium-color;
     font-weight: bold;
 }
 
-.github{
+.github {
     display: flex;
     justify-content: center;
     margin-top: 15px;
 }
 
-.githubRepo{
+.githubRepo {
     font-size: 14px;
     font-style: italic;
     text-decoration: none;
-    color: #102542;
+    color: $dark-color;
 }
 
-.githubRepo:hover{
-    color: #E0475B;
+.githubRepo:hover {
+    color: $medium-color;
 }
 
-.githubLogo{
+.githubLogo {
     height: 20px;
     margin-right: 5px;
 }
 
-
 /* CONTENU DE LA PAGE : expériences pro */
 
-.experiencesPro li
-{
+.experiencesPro li {
     font-size: 16px;
     text-align: left;
     padding: 5px 0 5px 0;
 }
 
-.experiencesPro h3
-{
+.experiencesPro h3 {
     font-size: 25px;
     padding: 0 0 20px 0;
 }
 
-.experiencesPro h4
-{
+.experiencesPro h4 {
     font-size: 20px;
     font-weight: 300;
     padding-bottom: 10px;
 }
 
-
 /* CONTENU DE LA PAGE : formations */
 
 .description ul {
-    font-size: 16px;    
-    display: flex;
-    flex-direction: column;
+    @include flex-colum;
+    font-size: 16px;
     align-items: flex-start;
     padding: 0;
     margin-left: 1.2em;
@@ -459,7 +478,8 @@ body
 
 /* CARTES QUI SE RETOURNENT */
 
-.formations, .experiencesPro {
+.formations,
+.experiencesPro {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -470,18 +490,18 @@ body
     perspective: 800px;
     transition: all 0.3s ease 0s;
 }
-        .formations .cardBox {
-            width: 300px;
-        }
-
-        .experiencesPro .cardBox {
-            width: 400px;
-        }
-        
-.cardBox:hover .card {
-    transform: rotateY( 180deg);
+.formations .cardBox {
+    width: 300px;
 }
-  
+
+.experiencesPro .cardBox {
+    width: 400px;
+}
+
+.cardBox:hover .card {
+    transform: rotateY(180deg);
+}
+
 .card {
     width: 100%;
     transform-style: preserve-3d;
@@ -495,71 +515,66 @@ body
 
 .experiencesPro .card {
     height: 400px;
-        }
-        
-        .card .front,
-        .card .back {
-            position: absolute;
-            backface-visibility: hidden;
-            box-sizing: border-box;
-            /* display: block; */
-            height: 100%;
-            width: 100%;
-            padding: 30px;
-            text-align: center;
-            border-radius: 20px;
-        }
+}
 
-        .card .front{
-            background-color: #102542;
-            color: WHITE;
-            background-size: cover;
-            box-shadow: 4px 4px #f3c4c0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;  
-        }
-        
-        .card .back{
-            transform: rotateY( 180deg);
-            color: #102542;
-            background: url("../img/AdobeStock_209206510-25.png");
-            box-shadow: 3px 3px #102542;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;  
-        }
-        .card .back .formations{
-            background-position: bottom;
-        }
-        .card .back .experiencesPro{
-            background-position: center;
-        }
-  
+.card .front,
+.card .back {
+    position: absolute;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    /* display: block; */
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.card .front {
+    @include flex-colum;
+    justify-content: center;
+    background-color: $dark-color;
+    color: WHITE;
+    background-size: cover;
+    @include box-shadow($light-color);
+}
+
+.card .back {
+    @include flex-colum;
+    justify-content: center;
+    transform: rotateY(180deg);
+    color: $dark-color;
+    background: url("../img/AdobeStock_209206510-25.png");
+    @include box-shadow($dark-color);
+}
+.card .back .formations {
+    background-position: bottom;
+}
+.card .back .experiencesPro {
+    background-position: center;
+}
+
 @-webkit-keyframes giro {
     from {
-      transform: rotateY( 180deg);
+        transform: rotateY(180deg);
     }
     to {
-      transform: rotateY( 0deg);
+        transform: rotateY(0deg);
     }
 }
-  
+
 @keyframes giro {
     from {
-      transform: rotateY( 180deg);
+        transform: rotateY(180deg);
     }
     to {
-      transform: rotateY( 0deg);
+        transform: rotateY(0deg);
     }
 }
-
-
 
 /* FOOTER */
 
-footer
-{
+footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -576,14 +591,13 @@ footer
     height: 70px;
 }
 
-#footer a
-{
+#footer a {
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
-    color: #102542;
+    color: $dark-color;
     background-color: #ffe8e6;
-    box-shadow: 3px 3px #102542;
+    @include box-shadow($dark-color);
     cursor: pointer;
     border-radius: 15px;
     width: 200px;
@@ -596,71 +610,64 @@ footer
 #footer a:hover {
     font-size: 16px;
     color: white;
-    background: #E0475B;
-    box-shadow: 3px 3px #102542;
+    background: $medium-color;
+    @include box-shadow($dark-color);
     width: 210px;
 }
 
-
-
-
-
 /*ne s'exécute que quand la largeur d'écran est <= 1100px*/
 
-@media screen and (max-width:1100px)
-{
-    #menuScroll{
+@media screen and (max-width: 1100px) {
+    #menuScroll {
         position: relative;
     }
-    .page-content h2{
+    .page-content h2 {
         font-size: 50px !important;
     }
-    .title span{
+    .title span {
         letter-spacing: 10px;
         top: -23px;
         font-size: 80px;
     }
-    .page-content h2{
+    .page-content h2 {
         margin: 0 0 40px 0;
     }
-    .boutonMenuProjet{
+    .boutonMenuProjet {
         font-size: 13px;
         width: 140px;
     }
     .boutonMenuProjet:hover {
         font-size: 13px;
     }
-    #buttonAll{
+    #buttonAll {
         font-size: 13px;
         width: 140px;
     }
-    #buttonAll:hover{
+    #buttonAll:hover {
         font-size: 13px;
     }
 }
 
-
 /*ne s'exécute que quand la largeur d'écran est <= 700px*/
 
-@media screen and (max-width:700px)
-{
-    .navScroll{
+@media screen and (max-width: 700px) {
+    .navScroll {
         display: none;
     }
 
-    h1{
+    h1 {
         font-size: 70px !important;
-        text-shadow: 5px 5px #102542 !important;
+        text-shadow: 5px 5px $dark-color !important;
         letter-spacing: 4px;
     }
 
-    header h2{
+    header h2 {
         font-size: 30px !important;
         text-shadow: 1.5px 1.5px white !important;
         letter-spacing: 1px;
     }
 
-    .page-content h2{
+    .page-content h2 {
         font-size: 40px !important;
         letter-spacing: 5px !important;
     }
@@ -668,19 +675,20 @@ footer
         margin: 4%;
     }
 
-    .middle{
+    .middle {
         padding: 0 20px 0 20px;
-    }    
+    }
 
-    .right{
+    .right {
         display: none;
     }
 
-    .content h3, p{
-        margin: 0;  
+    .content h3,
+    p {
+        margin: 0;
     }
 
-    p{
+    p {
         padding-bottom: 10px;
     }
 
@@ -688,27 +696,28 @@ footer
         height: 400px;
     }
 
-    .experiencesPro li
-    {
+    .experiencesPro li {
         font-size: 16px;
         padding: 2px 0 2px 0;
     }
 
-    footer{
+    footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    footer .colonne{
+    footer .colonne {
         max-width: 80%;
     }
-    .PROJETS{
+    .PROJETS {
         margin: 8% 0 0 0;
     }
-    .section-projets, .section-pro, .section-education{
+    .section-projets,
+    .section-pro,
+    .section-education {
         margin: 10px 3%;
     }
-    .title span{
+    .title span {
         letter-spacing: 8px;
         font-size: 50px;
         top: -8px;
@@ -717,9 +726,8 @@ footer
 
 /*ne s'exécute que quand la largeur d'écran est <= 500px*/
 
-@media screen and (max-width:500px){
-
-    .title span{
+@media screen and (max-width: 500px) {
+    .title span {
         letter-spacing: 7px;
         font-size: 40px;
         top: 0px;
